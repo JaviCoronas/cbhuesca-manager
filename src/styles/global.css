@@ -1,0 +1,27 @@
+  @keyframes slide-in {
+      from {
+        transform: translateX(-100%);
+        opacity: 0.25;
+      }
+
+      to {
+        transform: translateX(0%);
+        opacity: 1;
+      }
+  }
+
+  @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+      /* Agrega aquí los demás formatos de fuente compatibles si los tienes disponibles */
+      font-weight: normal;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+      /* Agrega aquí los demás formatos de fuente compatibles si los tienes disponibles */
+      font-weight: bold;
+      font-style: normal;
+  }

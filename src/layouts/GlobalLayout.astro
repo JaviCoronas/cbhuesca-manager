@@ -1,0 +1,22 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import { slide } from "astro:transitions";
+import Navbar from "../components/navbar/Navbar.astro";
+import Footer from "../components/footer/Footer.astro";
+const { pageTitle } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Navbar client:load />
+    <slot />
+    <!-- your content is injected here -->
+    <ViewTransitions />
+    <Footer />
+  </body>
+</html>

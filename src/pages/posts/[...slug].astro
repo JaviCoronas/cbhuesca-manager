@@ -1,0 +1,66 @@
+---
+import { getCollection } from "astro:content";
+import GlobalLayout from "../../layouts/GlobalLayout.astro";
+import { Image } from "astro:assets";
+import CbhButton from "../../components/cbhbutton/CbhButton.astro";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("posts");
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<GlobalLayout pageTitle={entry.data.title}>
+  <div class="h-12"></div>
+  <div class="container mx-auto flex flex-col w-2/3 shadow-2xl">
+    <main class="flex-grow">
+      <div class="flex flex-col justify-center items-center w-full text-black">
+        <Image
+          alt="badmin"
+          src={entry.data.coverImage}
+          height={200}
+          width={500}
+          style={{ objectFit: "fill" }}
+          class="w-screen"
+        />
+        <h1 class="text-5xl font-extrabold font-sans m-3">
+          {entry.data.title}
+        </h1>
+      </div>
+      <div class="m-3">
+        <Content class="article" />
+      </div>
+      <div class="flex justify-end m-5">
+        <CbhButton title="Atrás" href={"/blog"} />
+      </div>
+    </main>
+  </div>
+  <style is:inline>
+    h2 {
+      font-size: x-large;
+      font-weight: bold;
+      color: black;
+      margin-top: 10px;
+    }
+    p {
+      margin: 5px;
+    }
+    ul {
+      margin: 10px;
+    }
+    a {
+      color: blue;
+    }
+    .image {
+      display: flex;
+      justify-content: center;
+      margin: 3rem;
+    }
+  </style>
+</GlobalLayout>

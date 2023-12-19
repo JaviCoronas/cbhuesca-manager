@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import CbhButton from "../cbhbutton/CbhButton.astro";
+import Input from "./Input.astro";
+import SocialMedia from "../socialmedia/SocialMedia.astro";
+---
+
+<div class="relative bottom-0 z-1">
+  <div class="flex flex-wrap h-96">
+    <div class="flex-auto sm:w-1/3 m-3">
+      <div class="flex flex-row justify-center items-center m-3">
+        <Image
+          src="/assets/logos/logo-finalb.png"
+          alt="Logo"
+          class="filter brightness-0"
+          width={150}
+          height={600}
+        />
+      </div>
+      <div class="flex justify-center items-center">
+        <p class="text-xl font-semibold font-sans"> CLUB BÁDMINTON HUSCA</p>
+      </div>
+      <p class="font-sans mt-5">
+        Síguenos en redes sociales, interactúa y contáctanos para ser parte del
+        Club como jugador, entrenador, simpatizante o colaborador
+      </p>
+      <div class="flex h-44 justify-center items-center">
+        <SocialMedia size="48" />
+      </div>
+    </div>
+    <div class="flex-auto sm:w-1/3 m-10">
+      <form class="w-max-96">
+        <div class="m-3">
+          <Input type="name" placeholder="nombre..." />
+          <Input type="mail" placeholder="nombre@dominio.com" />
+          <p class="">
+            Escríbenos sobre qué quieres información, reservar pistas,
+            cumpleaños, colaborar...
+          </p>
+          <Input placeholder="Escribe lo que desees..." rows="5" />
+        </div>
+        <div class="flex justify-end pt-2 pb-5">
+          <CbhButton title="Enviar" href="/" />
+        </div>
+      </form>
+    </div>
+    <div class="flex-auto sm:w-1/3 justify-center items-center">
+      <div class="flex flex-row items-center justify-center">
+        <div>
+          <Image
+            src={"/assets/logos/ayuntamiento.png"}
+            alt="ayuntamiento"
+            height={30}
+            width={150}
+            class="m-5"
+          />
+        </div>
+        <div>
+          <Image
+            src={"/assets/logos/huesca-magia.png"}
+            alt="huesca-magia"
+            height={30}
+            width={150}
+            class="m-5"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

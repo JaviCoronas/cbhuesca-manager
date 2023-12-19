@@ -1,0 +1,63 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+
+const pageTitle = "Historia del Club";
+
+interface IHistoryData {
+  text: string;
+}
+const historyaData: IHistoryData[] = [
+  {
+    text: "Allá por el año 1986 comenzó a jugar en Huesca un grupo de amigos a bádminton. Por aquel tiempo no existía ni una sola pista de bádminton pintada en el suelo del pabellón de la antigua Universidad Laboral (hoy el IES Pirámide), lugar donde este grupo de amigos comenzó a jugar. Junto con algunos alumnos del centro, también entusiasmados por el atractivo de este deporte, se asociaron como Club Pirámide a la Federación Española de Bádminton, dado que por aquel entonces no existía la Federación Aragonesa.",
+  },
+  {
+    text: "En esta primera época hay que destacar a un alumno del centro, Enrique Gállego, que daba sus primeros pasos en este deporte y a Salvador Cored, el primer Campeón de Aragón Absoluto, en 1986 (lo sería otra vez la siguiente temporada).",
+  },
+  {
+    text: "Al año siguiente, el Club cambió de instalación: con la creación de un nuevo centro deportivo de iniciativa privada nacía el Club Bádminton Squash Huesca, que dio un importante impulso al badminton aragonés. De este tiempo cabe recordar el entusiasmo de muchos jugadores como Salvador Cored, Luis Romera, Enrique Camarón, Miguel Ángel Rodellar, Andrés Herrera, Ricardo Constante, y aquel jóven estudiante de los inicios, Enrique Gállego, que seguía cada vez mejorando más su nivel.",
+  },
+  {
+    text: "Poco a poco, el deporte fue conociéndose en la ciudad y empezaron a llegar chavales a practicarlo. Sin ser mucho menos exhaustivos, hay que recordar nombres como el de Jorge Sopena, Salas Argüís, Marta Artero, Alfredo Lacasa, Pablo Gavete, Nano Garcés, Javier Santafé… Junto a todos ellos llegan a Huesca dos importantísimas jugadoras que se quedaron a vivir en Huesca por sus ganas de entrenar en el Club. Son Cristina González y Mónica González. Es una época en la que los jugadores comienzan a jugar diferentes torneos y el Club Bádminton Squash Huesca empieza a ser reconocido como uno de los más importantes de España.",
+  },
+  {
+    text: "Durante esta época el flujo de nuevos jugadores no se interrumpe, muestra de ello es un ilusionado Jorge Laviña que por su nivel comenzaba a participar en los entrenamientos con las “estrellas” del equipo. Además comienzan a crearse grupos de entrenamiento para niños, donde comienzan a entrenar jugadores como Nacho Serena, Ismael Monzón, Clara Beltrán, Jara Sierra, Nicolás Escartín, Javier Coronas y Lucia Viñuales. Fue la época del Club Squash Huesca, ocho años de grandes éxitos.",
+  },
+  {
+    text: "En 1995 nació el Club Bádmitnon Huesca como tal. Tras un breve paso por el Gimnasio Alameda, cambiamos de instalación y desde entonces entrenamos en el Pabellón Juan XXIII de Huesca.",
+  },
+  {
+    text: "Puede decirse que ésta etapa es (o está siendo) la tercera del Club, y quizás sin duda la más floreciente, puesto que se empiezan a recoger los frutos de tantos años trabajando por este deporte. Se han ido consolidando algunos jugadores, al mismo tiempo que se seguía “asegurando el futuro” del equipo con una nueva hornada de jóvenes promesas que ahora mismo están en el camino de convertirse en toda una realidad dentro del Club: Vanesa Estallo, Rafael Círia, Ricardo Constante, Alex Coronas, Javi Ara……",
+  },
+  {
+    text: "Son, de momento, dieciocho años en los que, ante todo, nos hemos ganado el respeto y consideración de la gente y de los medios de comunicación. Con la cabeza más visible de Nicolás Escartín, el Club está recogiendo ahora lo mejor de estos casi veinte años sin dejar de trabajar para los próximos veinte.",
+  },
+  { text: "" },
+];
+---
+
+<GlobalLayout pageTitle={pageTitle}>
+  <div class="bg-slate-200">
+    <div
+      class="flex flex-col h-30 items-center justify-center bg-cover bg-center"
+      style="background-image: url('/assets/aboutHeader.webp');"
+    >
+      <div class="flex-none">
+        <div class="flex flex-col items-center justify-center h-36 md:h-96">
+          <h1
+            class="text-3xl md:text-5xl lg:text-6xl text-white font-sans font-extrabold text-center mb-4 z-10"
+          >
+            {pageTitle.toUpperCase()}
+          </h1>
+          <p class="text-lg text-white text-center z-10 font-sans"></p>
+        </div>
+      </div>
+    </div>
+    <div class="font-sans mt-12 md:mr-28 md:ml-28 mr-3 ml-3">
+      {
+        historyaData.map((option, index) => (
+          <p class="text-2xl pb-5 pt-5">{option.text}</p>
+        ))
+      }
+    </div>
+  </div>
+</GlobalLayout>

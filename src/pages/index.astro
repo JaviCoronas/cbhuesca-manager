@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import back from "../../public/assets/homeBackground.webp";
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+import CbhButton from "../components/cbhbutton/CbhButton.astro";
+import "../styles/global.css";
+
+const pageTitle = "Club Bádminton Huesca";
+---
+
+<GlobalLayout pageTitle={pageTitle}>
+  <div
+    class="bg-cover bg-center h-screen"
+    style="background-image: url('/assets/homeBackground.webp');"
+  >
+    <div class="flex flex-col items-start justify-center h-4/6">
+      <h1
+        class="text-white text-5xl font-bold cursor-default animate-slide-in ml-3 md:ml-16 font-sans"
+      >
+        Badminton Huesca
+      </h1>
+      <div class="md:ml-32 ml-3">
+        <CbhButton title="Contacta con nosotros" href="/about" />
+        <CbhButton title="Reserva una pista" href="/about" />
+      </div>
+    </div>
+  </div>
+</GlobalLayout>
+<style>
+  .animate-slide-in {
+    animation-delay: 1s;
+    animation: slide-in 2s; /* Duración, tipo, y retardo de la animación */
+    animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+  }
+</style>
