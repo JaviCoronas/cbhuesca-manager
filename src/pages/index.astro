@@ -10,10 +10,10 @@ const pageTitle = "Club Bádminton Huesca";
 
 <GlobalLayout pageTitle={pageTitle}>
   <div
-    class="bg-cover bg-center h-screen"
+    class="flex flex-col bg-cover bg-center h-screen"
     style="background-image: url('/assets/homeBackground.webp');"
   >
-    <div class="flex flex-col items-start justify-center h-4/6">
+    <div class="flex flex-col items-start justify-center h-full">
       <h1
         class="text-white text-5xl font-bold cursor-default animate-slide-in ml-3 md:ml-16 font-sans"
       >
@@ -24,12 +24,24 @@ const pageTitle = "Club Bádminton Huesca";
         <CbhButton title="Reserva una pista" href="/about" />
       </div>
     </div>
+    <div class="flex flex-col justify-center items-center mb-12">
+      <div
+        class="shadow-xl m-25 bg-white h-60 w-3/4 rounded-xl animate-slide-down"
+      >
+        dsf
+      </div>
+    </div>
   </div>
 </GlobalLayout>
 <style>
   .animate-slide-in {
     animation-delay: 1s;
     animation: slide-in 2s; /* Duración, tipo, y retardo de la animación */
+    animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+  }
+  .animate-slide-down {
+    animation-delay: 1s;
+    animation: slide-down 2s; /* Duración, tipo, y retardo de la animación */
     animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
   }
 </style>

@@ -10,6 +10,17 @@
       }
   }
 
+  @keyframes slide-down {
+    from {
+      transform: translateY(100%);
+    }
+
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
   @font-face {
       font-family: 'Montserrat';
       src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
