@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+
+const { title, resume, src, iconsvg } = Astro.props;
+
+const sff = "../../../public/assets/icons/calendarIcon.svg";
+---
+
+<div class="flex flex-col h-96 w-64 bg-slate-200 m-5 rounded-xl">
+  <img
+    src={src}
+    alt="Logo del club"
+    class="hover:cursor-pointer h-40 object-cover"
+  />
+  <div class="relative bg-transparent bottom-8">
+    <div class="flex flex-col items-center">
+      <img
+        src={iconsvg}
+        alt="Icono"
+        class="bg-black rounded-full p-3 w-16 h-16"
+      />
+      <p class="text-3xl text-center">{title}</p>
+      <small class="text-slate-700 m-5 text-center">{resume}</small>
+    </div>
+  </div>
+</div>

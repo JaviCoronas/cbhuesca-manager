@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import back from "../../public/assets/homeBackground.webp";
 import GlobalLayout from "../layouts/GlobalLayout.astro";
 import CbhButton from "../components/cbhbutton/CbhButton.astro";
+import PaperHome from "../components/paperhome/PaperHome.astro";
 import "../styles/global.css";
 
 const pageTitle = "Club Bádminton Huesca";
@@ -25,13 +26,10 @@ const pageTitle = "Club Bádminton Huesca";
       </div>
     </div>
     <div class="flex flex-col justify-center items-center mb-12">
-      <div
-        class="shadow-xl m-25 bg-white h-60 w-3/4 rounded-xl animate-slide-down"
-      >
-        dsf
-      </div>
+      <PaperHome />
     </div>
   </div>
+  <div class="h-60 w-full bg-slate-200"></div>
 </GlobalLayout>
 <style>
   .animate-slide-in {
