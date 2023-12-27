@@ -6,12 +6,10 @@ const { title, resume, src, iconsvg } = Astro.props;
 const sff = "../../../public/assets/icons/calendarIcon.svg";
 ---
 
-<div class="flex flex-col h-96 w-64 bg-slate-200 m-5 rounded-xl">
-  <img
-    src={src}
-    alt="Logo del club"
-    class="hover:cursor-pointer h-40 object-cover"
-  />
+<div
+  class="flex flex-col h-96 w-64 m-5 rounded-xl hover:cursor-pointer animate-zoom"
+>
+  <img src={src} alt="Logo del club" class="h-40 object-cover" />
   <div class="relative bg-transparent bottom-8">
     <div class="flex flex-col items-center">
       <img
@@ -24,3 +22,9 @@ const sff = "../../../public/assets/icons/calendarIcon.svg";
     </div>
   </div>
 </div>
+<style>
+  .animate-zoom:hover {
+    animation: animate-zoom 1s;
+    animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+  }
+</style>
