@@ -38,12 +38,13 @@ const { Content } = await entry.render();
         <Content class="article" />
       </div>
       <div class="flex justify-end m-5">
-        <CbhButton title="Atrás" href={"/blog"} />
+        <CbhButton title="Atrás" href={"/news"} />
       </div>
     </main>
   </div>
   <style is:inline>
     h2 {
+      font-family: "Montserrat", sans-serif;
       font-size: x-large;
       font-weight: bold;
       color: black;
@@ -51,6 +52,8 @@ const { Content } = await entry.render();
     }
     p {
       margin-top: 10px;
+      font-family: "Montserrat", sans-serif;
+      font-size: large;
     }
     ul {
       margin: 10px;
