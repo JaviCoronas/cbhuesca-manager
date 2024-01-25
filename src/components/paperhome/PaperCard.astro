@@ -1,13 +1,14 @@
 ---
 import { Image } from "astro:assets";
 
-const { title, resume, src, iconsvg } = Astro.props;
+const { title, resume, src, iconsvg, href } = Astro.props;
 
 const sff = "../../../public/assets/icons/calendarIcon.svg";
 ---
 
-<div
+<a
   class="flex flex-col h-96 w-64 m-5 rounded-xl hover:cursor-pointer animate-zoom"
+  href={href}
 >
   <img src={src} alt="Logo del club" class="h-40 object-cover" />
   <div class="relative bg-transparent bottom-8">
@@ -21,7 +22,7 @@ const sff = "../../../public/assets/icons/calendarIcon.svg";
       <small class="text-slate-700 m-5 text-center">{resume}</small>
     </div>
   </div>
-</div>
+</a>
 <style>
   .animate-zoom:hover {
     animation: animate-zoom 1s;

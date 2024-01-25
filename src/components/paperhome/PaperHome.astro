@@ -8,6 +8,7 @@ interface PapersInterface {
   title: string;
   resume: string;
   iconsvg: string;
+  href?: string;
 }
 
 export const papers: PapersInterface[] = [
@@ -15,7 +16,8 @@ export const papers: PapersInterface[] = [
     title: "Calendario",
     src: "https://firebasestorage.googleapis.com/v0/b/badminton-huesca.appspot.com/o/assets%2Fracketshadow.webp?alt=media&token=8cd17027-bbb4-4240-bf6a-e92da2580303",
     resume: "Aquí podrás encontrar información de los próximas competiciones, formulario a las inscripciones y cuadros.",
-    iconsvg: "../../../public/assets/icons/calendarIcon.svg?raw"
+    iconsvg: "../../../public/assets/icons/calendarIcon.svg?raw",
+    href: "/calendar"
   },
   {
     title: "Eventos",
@@ -43,7 +45,7 @@ export const papers: PapersInterface[] = [
 >
 {
     papers.map((paper) => (
-        <PaperCard title={paper.title} src={paper.src} resume={paper.resume} iconsvg={paper.iconsvg}/>
+        <PaperCard title={paper.title} src={paper.src} resume={paper.resume} iconsvg={paper.iconsvg} href= {paper.href}/>
     ))
 }
 </div>
