@@ -1,0 +1,187 @@
+---
+import CbhButton from "../../components/cbhbutton/CbhButton.astro";
+import GlobalLayout from "../../layouts/GlobalLayout.astro";
+import ButtonTable from "./ButtonTable.astro";
+const pageTitle = "Calendario";
+
+const data = [
+  {
+    id: 1,
+    date: "29/08/2023",
+    name: "Cliffchat, mocking",
+    inscrip: null,
+    cuadro:
+      "https://hubpages.com/justo.xml?rutrum=lacinia&nulla=eget&nunc=tincidunt&purus=eget&phasellus=tempus&in=vel&felis=pede&donec=morbi&semper=porttitor&sapien=lorem&a=id&libero=ligula&nam=suspendisse&dui=ornare&proin=consequat&leo=lectus&odio=in&porttitor=est&id=risus&consequat=auctor&in=sed&consequat=tristique&ut=in&nulla=tempus&sed=sit&accumsan=amet&felis=sem&ut=fusce&at=consequat&dolor=nulla&quis=nisl&odio=nunc&consequat=nisl&varius=duis&integer=bibendum&ac=felis&leo=sed&pellentesque=interdum&ultrices=venenatis&mattis=turpis&odio=enim&donec=blandit&vitae=mi&nisi=in&nam=porttitor&ultrices=pede&libero=justo&non=eu&mattis=massa&pulvinar=donec&nulla=dapibus&pede=duis&ullamcorper=at&augue=velit&a=eu&suscipit=est&nulla=congue&elit=elementum&ac=in&nulla=hac&sed=habitasse&vel=platea&enim=dictumst&sit=morbi&amet=vestibulum&nunc=velit&viverra=id&dapibus=pretium&nulla=iaculis&suscipit=diam&ligula=erat",
+  },
+  {
+    id: 2,
+    date: "25/07/2023",
+    name: "Beaver, eurasian",
+    inscrip:
+      "https://icio.us/in/quam.aspx?nascetur=ultrices&ridiculus=enim&mus=lorem&etiam=ipsum&vel=dolor&augue=sit&vestibulum=amet&rutrum=consectetuer&rutrum=adipiscing&neque=elit&aenean=proin&auctor=interdum&gravida=mauris&sem=non&praesent=ligula&id=pellentesque&massa=ultrices&id=phasellus&nisl=id&venenatis=sapien&lacinia=in&aenean=sapien&sit=iaculis&amet=congue&justo=vivamus&morbi=metus&ut=arcu&odio=adipiscing&cras=molestie&mi=hendrerit&pede=at&malesuada=vulputate&in=vitae&imperdiet=nisl&et=aenean&commodo=lectus&vulputate=pellentesque&justo=eget&in=nunc&blandit=donec&ultrices=quis&enim=orci&lorem=eget&ipsum=orci&dolor=vehicula&sit=condimentum&amet=curabitur&consectetuer=in&adipiscing=libero&elit=ut&proin=massa&interdum=volutpat&mauris=convallis&non=morbi&ligula=odio&pellentesque=odio",
+    cuadro:
+      "https://mayoclinic.com/tristique/fusce/congue/diam/id.jsp?magna=luctus&vestibulum=et&aliquet=ultrices&ultrices=posuere&erat=cubilia&tortor=curae&sollicitudin=mauris&mi=viverra&sit=diam&amet=vitae&lobortis=quam&sapien=suspendisse&sapien=potenti&non=nullam&mi=porttitor&integer=lacus&ac=at&neque=turpis&duis=donec&bibendum=posuere&morbi=metus&non=vitae&quam=ipsum&nec=aliquam&dui=non&luctus=mauris&rutrum=morbi&nulla=non&tellus=lectus&in=aliquam&sagittis=sit&dui=amet&vel=diam&nisl=in",
+  },
+  {
+    id: 3,
+    date: "03/04/2023",
+    name: "Common palm civet",
+    inscrip:
+      "https://guardian.co.uk/et/ultrices/posuere.aspx?nec=phasellus&condimentum=in&neque=felis&sapien=donec&placerat=semper&ante=sapien&nulla=a&justo=libero&aliquam=nam&quis=dui&turpis=proin&eget=leo&elit=odio&sodales=porttitor&scelerisque=id&mauris=consequat&sit=in&amet=consequat&eros=ut&suspendisse=nulla&accumsan=sed&tortor=accumsan&quis=felis&turpis=ut&sed=at&ante=dolor&vivamus=quis&tortor=odio&duis=consequat&mattis=varius&egestas=integer&metus=ac&aenean=leo&fermentum=pellentesque&donec=ultrices&ut=mattis&mauris=odio&eget=donec&massa=vitae&tempor=nisi&convallis=nam&nulla=ultrices&neque=libero&libero=non&convallis=mattis&eget=pulvinar&eleifend=nulla&luctus=pede&ultricies=ullamcorper&eu=augue&nibh=a&quisque=suscipit&id=nulla&justo=elit&sit=ac&amet=nulla&sapien=sed&dignissim=vel&vestibulum=enim&vestibulum=sit&ante=amet&ipsum=nunc&primis=viverra&in=dapibus&faucibus=nulla&orci=suscipit&luctus=ligula&et=in&ultrices=lacus&posuere=curabitur&cubilia=at&curae=ipsum&nulla=ac&dapibus=tellus&dolor=semper&vel=interdum&est=mauris",
+    cuadro:
+      "https://netvibes.com/vitae.jpg?quisque=platea&arcu=dictumst&libero=maecenas&rutrum=ut&ac=massa&lobortis=quis",
+  },
+  {
+    id: 4,
+    date: "27/12/2023",
+    name: "Lappet-faced vulture",
+    inscrip:
+      "http://geocities.com/pellentesque/volutpat/dui/maecenas/tristique/est.js?in=quis",
+    cuadro: "https://yahoo.co.jp/vulputate/elementum.aspx?volutpat=felis",
+  },
+  {
+    id: 5,
+    date: "17/01/2024",
+    name: "Southern elephant seal",
+    inscrip:
+      "http://ucoz.com/aliquet/at.jpg?felis=arcu&sed=adipiscing&interdum=molestie&venenatis=hendrerit&turpis=at&enim=vulputate&blandit=vitae&mi=nisl&in=aenean&porttitor=lectus&pede=pellentesque&justo=eget&eu=nunc&massa=donec&donec=quis&dapibus=orci&duis=eget&at=orci&velit=vehicula&eu=condimentum&est=curabitur&congue=in&elementum=libero&in=ut&hac=massa&habitasse=volutpat&platea=convallis&dictumst=morbi&morbi=odio&vestibulum=odio&velit=elementum&id=eu&pretium=interdum&iaculis=eu&diam=tincidunt&erat=in&fermentum=leo&justo=maecenas&nec=pulvinar&condimentum=lobortis&neque=est&sapien=phasellus&placerat=sit&ante=amet&nulla=erat&justo=nulla&aliquam=tempus&quis=vivamus&turpis=in&eget=felis&elit=eu&sodales=sapien&scelerisque=cursus&mauris=vestibulum&sit=proin&amet=eu&eros=mi&suspendisse=nulla&accumsan=ac&tortor=enim&quis=in&turpis=tempor&sed=turpis&ante=nec&vivamus=euismod&tortor=scelerisque&duis=quam&mattis=turpis&egestas=adipiscing&metus=lorem&aenean=vitae&fermentum=mattis&donec=nibh&ut=ligula&mauris=nec&eget=sem&massa=duis&tempor=aliquam&convallis=convallis&nulla=nunc&neque=proin&libero=at",
+    cuadro:
+      "https://storify.com/quis/orci.jsp?nulla=integer&nunc=tincidunt&purus=ante&phasellus=vel&in=ipsum",
+  },
+  {
+    id: 6,
+    date: "16/02/2023",
+    name: "Giant otter",
+    inscrip:
+      "http://squidoo.com/aliquet/massa/id/lobortis/convallis.jpg?sapien=praesent&dignissim=blandit&vestibulum=nam&vestibulum=nulla",
+    cuadro:
+      "https://reference.com/faucibus/orci/luctus/et/ultrices/posuere.png?commodo=euismod&placerat=scelerisque&praesent=quam&blandit=turpis&nam=adipiscing&nulla=lorem&integer=vitae&pede=mattis&justo=nibh&lacinia=ligula&eget=nec&tincidunt=sem&eget=duis&tempus=aliquam&vel=convallis&pede=nunc&morbi=proin&porttitor=at&lorem=turpis&id=a&ligula=pede&suspendisse=posuere&ornare=nonummy&consequat=integer&lectus=non&in=velit&est=donec&risus=diam&auctor=neque&sed=vestibulum&tristique=eget&in=vulputate&tempus=ut&sit=ultrices&amet=vel&sem=augue&fusce=vestibulum&consequat=ante&nulla=ipsum&nisl=primis&nunc=in&nisl=faucibus&duis=orci",
+  },
+  {
+    id: 7,
+    date: "24/05/2023",
+    name: "Whale, long-finned pilot",
+    inscrip:
+      "http://si.edu/diam.jsp?vulputate=elementum&ut=pellentesque&ultrices=quisque&vel=porta&augue=volutpat&vestibulum=erat&ante=quisque&ipsum=erat&primis=eros&in=viverra&faucibus=eget&orci=congue&luctus=eget&et=semper&ultrices=rutrum&posuere=nulla&cubilia=nunc&curae=purus&donec=phasellus&pharetra=in&magna=felis&vestibulum=donec&aliquet=semper&ultrices=sapien&erat=a&tortor=libero&sollicitudin=nam&mi=dui&sit=proin&amet=leo&lobortis=odio&sapien=porttitor&sapien=id&non=consequat&mi=in&integer=consequat&ac=ut&neque=nulla&duis=sed&bibendum=accumsan&morbi=felis&non=ut&quam=at&nec=dolor&dui=quis&luctus=odio&rutrum=consequat&nulla=varius&tellus=integer&in=ac&sagittis=leo",
+    cuadro:
+      "https://fotki.com/in/faucibus/orci/luctus/et.html?tortor=nam&quis=ultrices&turpis=libero&sed=non&ante=mattis&vivamus=pulvinar&tortor=nulla&duis=pede&mattis=ullamcorper&egestas=augue&metus=a&aenean=suscipit",
+  },
+  {
+    id: 8,
+    date: "25/04/2023",
+    name: "Cormorant, flightless",
+    inscrip:
+      "https://yahoo.co.jp/morbi/vestibulum/velit/id/pretium/iaculis/diam.aspx?consequat=nisi&ut=venenatis",
+    cuadro:
+      "https://yandex.ru/sed/ante.xml?at=rhoncus&lorem=sed&integer=vestibulum&tincidunt=sit&ante=amet&vel=cursus&ipsum=id&praesent=turpis&blandit=integer&lacinia=aliquet&erat=massa&vestibulum=id&sed=lobortis&magna=convallis&at=tortor&nunc=risus&commodo=dapibus&placerat=augue&praesent=vel&blandit=accumsan&nam=tellus&nulla=nisi&integer=eu&pede=orci&justo=mauris&lacinia=lacinia&eget=sapien&tincidunt=quis&eget=libero&tempus=nullam&vel=sit&pede=amet&morbi=turpis&porttitor=elementum&lorem=ligula&id=vehicula&ligula=consequat&suspendisse=morbi&ornare=a&consequat=ipsum&lectus=integer&in=a&est=nibh&risus=in&auctor=quis&sed=justo&tristique=maecenas&in=rhoncus&tempus=aliquam&sit=lacus&amet=morbi&sem=quis&fusce=tortor&consequat=id&nulla=nulla&nisl=ultrices&nunc=aliquet&nisl=maecenas&duis=leo&bibendum=odio&felis=condimentum&sed=id&interdum=luctus&venenatis=nec&turpis=molestie&enim=sed",
+  },
+  {
+    id: 9,
+    date: "30/03/2023",
+    name: "Pine siskin",
+    inscrip:
+      "http://hp.com/cursus/id/turpis/integer.png?vivamus=ac&tortor=nibh&duis=fusce&mattis=lacus&egestas=purus&metus=aliquet&aenean=at&fermentum=feugiat&donec=non&ut=pretium&mauris=quis&eget=lectus&massa=suspendisse&tempor=potenti&convallis=in&nulla=eleifend&neque=quam&libero=a&convallis=odio&eget=in&eleifend=hac&luctus=habitasse&ultricies=platea&eu=dictumst&nibh=maecenas&quisque=ut&id=massa&justo=quis&sit=augue",
+    cuadro:
+      "http://deliciousdays.com/dolor/quis/odio/consequat/varius/integer.jpg?et=vestibulum&ultrices=ante&posuere=ipsum&cubilia=primis&curae=in&duis=faucibus&faucibus=orci&accumsan=luctus&odio=et&curabitur=ultrices&convallis=posuere&duis=cubilia&consequat=curae&dui=donec&nec=pharetra&nisi=magna&volutpat=vestibulum&eleifend=aliquet&donec=ultrices&ut=erat&dolor=tortor&morbi=sollicitudin&vel=mi&lectus=sit&in=amet&quam=lobortis&fringilla=sapien&rhoncus=sapien&mauris=non&enim=mi&leo=integer&rhoncus=ac&sed=neque&vestibulum=duis&sit=bibendum&amet=morbi&cursus=non&id=quam&turpis=nec&integer=dui&aliquet=luctus&massa=rutrum&id=nulla&lobortis=tellus&convallis=in&tortor=sagittis&risus=dui&dapibus=vel&augue=nisl&vel=duis&accumsan=ac&tellus=nibh&nisi=fusce&eu=lacus&orci=purus&mauris=aliquet&lacinia=at&sapien=feugiat&quis=non&libero=pretium&nullam=quis&sit=lectus&amet=suspendisse&turpis=potenti&elementum=in&ligula=eleifend&vehicula=quam&consequat=a&morbi=odio&a=in&ipsum=hac",
+  },
+  {
+    id: 10,
+    date: "06/10/2023",
+    name: "Plover, blacksmith",
+    inscrip:
+      "http://bbc.co.uk/metus/sapien/ut.html?id=maecenas&ornare=tristique&imperdiet=est&sapien=et&urna=tempus&pretium=semper&nisl=est&ut=quam&volutpat=pharetra&sapien=magna&arcu=ac&sed=consequat&augue=metus&aliquam=sapien&erat=ut&volutpat=nunc&in=vestibulum&congue=ante&etiam=ipsum&justo=primis&etiam=in&pretium=faucibus&iaculis=orci&justo=luctus&in=et&hac=ultrices&habitasse=posuere&platea=cubilia&dictumst=curae&etiam=mauris&faucibus=viverra&cursus=diam&urna=vitae&ut=quam&tellus=suspendisse&nulla=potenti&ut=nullam&erat=porttitor&id=lacus&mauris=at&vulputate=turpis&elementum=donec&nullam=posuere&varius=metus&nulla=vitae&facilisi=ipsum&cras=aliquam&non=non&velit=mauris&nec=morbi&nisi=non&vulputate=lectus&nonummy=aliquam&maecenas=sit&tincidunt=amet&lacus=diam",
+    cuadro:
+      "http://yahoo.co.jp/quis/orci/nullam.jsp?magnis=etiam&dis=justo&parturient=etiam&montes=pretium&nascetur=iaculis&ridiculus=justo&mus=in&vivamus=hac&vestibulum=habitasse&sagittis=platea&sapien=dictumst&cum=etiam&sociis=faucibus&natoque=cursus&penatibus=urna&et=ut&magnis=tellus&dis=nulla&parturient=ut&montes=erat&nascetur=id&ridiculus=mauris&mus=vulputate&etiam=elementum&vel=nullam&augue=varius&vestibulum=nulla&rutrum=facilisi&rutrum=cras&neque=non&aenean=velit&auctor=nec&gravida=nisi&sem=vulputate&praesent=nonummy&id=maecenas&massa=tincidunt&id=lacus&nisl=at&venenatis=velit&lacinia=vivamus&aenean=vel&sit=nulla&amet=eget&justo=eros&morbi=elementum&ut=pellentesque&odio=quisque&cras=porta&mi=volutpat&pede=erat&malesuada=quisque&in=erat&imperdiet=eros&et=viverra&commodo=eget&vulputate=congue&justo=eget&in=semper&blandit=rutrum&ultrices=nulla&enim=nunc&lorem=purus&ipsum=phasellus&dolor=in&sit=felis&amet=donec&consectetuer=semper&adipiscing=sapien&elit=a&proin=libero&interdum=nam&mauris=dui&non=proin&ligula=leo&pellentesque=odio&ultrices=porttitor&phasellus=id&id=consequat",
+  },
+];
+---
+
+<GlobalLayout pageTitle={pageTitle}>
+  <div
+    class="flex flex-col h-30 items-center justify-center bg-cover bg-center"
+    style="background-image: url('/assets/aboutHeader.webp');"
+  >
+    <div class="flex-none">
+      <div class="flex flex-col items-center justify-center h-36 md:h-96">
+        <h1
+          class="text-3xl md:text-5xl lg:text-6xl text-white font-sans font-extrabold text-center mb-4 z-10"
+        >
+          {pageTitle.toUpperCase()}
+        </h1>
+        <p class="text-lg text-white text-center z-10 font-sans"></p>
+      </div>
+    </div>
+  </div>
+  <div class="flex items-center justify-center w-full">
+    <div class="container m-3 hidden md:block">
+      <table
+        class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5"
+      >
+        <thead class="text-white md:visible invisible">
+          <tr
+            class="bg-black flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0"
+          >
+            <th class="p-3 text-left">Fecha</th>
+            <th class="p-3 text-left">Nombre</th>
+            <th class="p-3 text-left"></th>
+            <th class="p-3 text-left"></th>
+          </tr>
+        </thead>
+        <tbody class="flex-1 sm:flex-none">
+          {
+            data.map((element) => (
+              <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0 hover:bg-gray-100">
+                <td class="border-grey-light border p-3">{element.date}</td>
+                <td class="border-grey-light border p-3 truncate">
+                  {element.name}
+                </td>
+                <td class="border-grey-light border justify-center items-center">
+                  <ButtonTable title="Inscripción" href={element.inscrip} />
+                </td>
+                <td class="border-grey-light border">
+                  <ButtonTable title="Cuadro" href={element.cuadro} />
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <div class="visile md:hidden w-full">
+      {
+        data.map((element) => (
+          <div class="flex flex-col flex-no wrap mb-2 border border-gray-300 p-3 m-3 rounded-lg">
+            <small class="pb-3">{element.date}</small>
+            <h4 class=" text-lg pb-3 font-sans">{element.name}</h4>
+            <ButtonTable title="Inscripción" href={element.inscrip} />
+            <ButtonTable title="Cuadro" href={element.cuadro} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</GlobalLayout>
+<style>
+  html,
+  body {
+    height: 100%;
+  }
+
+  @media (min-width: 640px) {
+    table {
+      display: inline-table !important;
+    }
+
+    thead tr:not(:first-child) {
+      display: none;
+    }
+  }
+
+  td:not(:last-child) {
+    border-bottom: 0;
+  }
+
+  th:not(:last-child) {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+</style>
