@@ -6,7 +6,7 @@ const { disable, title, href } = Astro.props;
   href != null ? (
     <a
       type="button"
-      class="flex justify-center items-center bg-black hover:bg-black text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded"
+      class="flex justify-center items-center w-40 bg-black hover:bg-black text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded"
       href={href}
     >
       {title}
@@ -14,7 +14,7 @@ const { disable, title, href } = Astro.props;
   ) : (
     <a
       type="button"
-      class="flex justify-center items-center bg-slate-300 text-white font-semibold hover:text-white py-2 px-4 border rounded"
+      class="flex justify-center items-center w-40 bg-slate-300 text-white font-semibold hover:text-white py-2 px-4 border rounded"
     >
       {title}
     </a>

@@ -29,7 +29,7 @@ const data = await getAllTournaments();
     </div>
   </div>
   <div class="flex items-center justify-center w-full">
-    <div class="container m-3 hidden md:block">
+    <div class="container hidden md:block">
       <table
         class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5"
       >
@@ -39,6 +39,12 @@ const data = await getAllTournaments();
           >
             <th class="p-3 text-left">Fecha</th>
             <th class="p-3 text-left">Nombre</th>
+            <th class="p-3 text-left">
+              <div class="flex justify-center items-center">Sede</div>
+            </th>
+            <th class="p-3 text-left">
+              <div class="flex justify-center items-center">Categoría</div>
+            </th>
             <th class="p-3 text-left"></th>
             <th class="p-3 text-left"></th>
           </tr>
@@ -46,16 +52,31 @@ const data = await getAllTournaments();
         <tbody class="flex-1 sm:flex-none">
           {
             data.map((element: Tournament) => (
-              <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0 hover:bg-gray-100">
-                <td class="border-grey-light border p-3">{element.date}</td>
-                <td class="border-grey-light border p-3 truncate">
-                  {element.name}
+              <tr class="flex flex-col sm:table-row mb-2 sm:mb-0 hover:bg-gray-100">
+                <td class="p-3 w-32">{element.date}</td>
+                <td class="p-3 truncate">{element.name}</td>
+                <td class="p-3 truncate w-32">
+                  <div class="flex justify-center items-center">
+                    {element.location}
+                  </div>
                 </td>
-                <td class="border-grey-light border justify-center items-center">
-                  <ButtonTable title="Inscripción" href={element.inscription} />
+                <td class="p-3 truncate w-32">
+                  <div class="flex justify-center items-center">
+                    {element.category}
+                  </div>
                 </td>
-                <td class="border-grey-light border">
-                  <ButtonTable title="Cuadro" href={element.draw} />
+                <td class="">
+                  <div class="flex justify-center items-center">
+                    <ButtonTable
+                      title="Inscripción"
+                      href={element.inscription}
+                    />
+                  </div>
+                </td>
+                <td class="">
+                  <div class="flex justify-center items-center">
+                    <ButtonTable title="Cuadro" href={element.draw} />
+                  </div>
                 </td>
               </tr>
             ))
@@ -63,14 +84,20 @@ const data = await getAllTournaments();
         </tbody>
       </table>
     </div>
-    <div class="visile md:hidden w-full">
+    <div class="visile md:hidden m-2">
       {
         data.map((element: any) => (
-          <div class="flex flex-col flex-no wrap mb-2 border border-gray-300 p-3 m-3 rounded-lg">
-            <small class="pb-3">{element.date}</small>
+          <div class="flex flex-col flex-no wrap border border-gray-300 p-3 rounded-lg gap-1 shadow-md">
+            <small class="pb-3 font-sans font-light text-slate-500">
+              {element.date}
+            </small>
             <h4 class=" text-lg pb-3 font-sans">{element.name}</h4>
-            <ButtonTable title="Inscripción" href={element.inscription} />
-            <ButtonTable title="Cuadro" href={element.draw} />
+            <div class="flex justify-center items-center">
+              <ButtonTable title="Inscripción" href={element.inscription} />
+            </div>
+            <div class="flex justify-center items-center">
+              <ButtonTable title="Cuadro" href={element.draw} />
+            </div>
           </div>
         ))
       }
