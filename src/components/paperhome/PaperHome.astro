@@ -23,7 +23,7 @@ export const papers: PapersInterface[] = [
     title: "Eventos",
     src: "https://firebasestorage.googleapis.com/v0/b/badminton-huesca.appspot.com/o/assets%2Fhistory.webp?alt=media&token=3b8c7557-a699-4c8a-84e4-65d428af4ff0",
     resume: "Aqui los eventos que tenemos en el club, que no son pocos!",
-    iconsvg: "../../../public/assets/icons/eventsIcon.svg"
+    iconsvg:"../../../public/assets/icons/eventsIcon.svg"
   },
     {
     title: "Horarios",
@@ -45,7 +45,7 @@ export const papers: PapersInterface[] = [
 >
 {
     papers.map((paper) => (
-        <PaperCard title={paper.title} src={paper.src} resume={paper.resume} iconsvg={paper.iconsvg} href= {paper.href}/>
+        <PaperCard title={paper.title} src={paper.src} resume={paper.resume} iconsvg={paper.iconsvg} href={paper.href}/>
     ))
 }
 </div>
