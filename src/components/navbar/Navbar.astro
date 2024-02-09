@@ -31,7 +31,7 @@ import SocialMedia from "../../components/socialmedia/SocialMedia.astro";
     </button>
   </div>
   <div
-    id="menu"
+    id="navLinks"
     class="w-full justify-center items-center lg:flex lg:items-center lg:w-auto hidden md:hidden"
   >
     <div class="text-sm lg:flex-grow">
@@ -56,12 +56,14 @@ import SocialMedia from "../../components/socialmedia/SocialMedia.astro";
       <SocialMedia size="24" />
     </div>
   </div>
-  <script type="module">
-    const hamburgerBtn = document.getElementById("hamburgerBtn");
-    const menu = document.getElementById("menu");
+  <script>
+    document.addEventListener("astro:page-load", () => {
+      const menuToggle = document.getElementById("hamburgerBtn");
+      const navLinks = document.getElementById("navLinks");
 
-    hamburgerBtn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("hidden");
+      });
     });
   </script>
 </nav>

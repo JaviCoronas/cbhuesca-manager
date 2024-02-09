@@ -1,9 +1,6 @@
 import React, { type FormEvent } from "react";
-import { useState } from "react";
 
 const FeedbackForm = () => {
-  const [responseMessage, setResponseMessage] = useState("");
-
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
@@ -13,11 +10,7 @@ const FeedbackForm = () => {
     });
 
     if (response.status == 200) {
-      alert("Exito");
-    }
-    const data = await response.json();
-    if (data.message) {
-      setResponseMessage(data.message);
+      alert("Mensaje mandado con éxito.");
     }
   }
 
