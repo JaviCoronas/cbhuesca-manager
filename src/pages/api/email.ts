@@ -24,7 +24,7 @@ export const POST: APIRoute = async ({ request }) => {
     <strong>Mensaje:</strong> ${message}
   `;
   const recipients = ["javcor3@gmail.com", email];
-  const { data, error } = await resendClient.emails.send({
+  const { data } = await resendClient.emails.send({
     from: "Página Web <onboarding@resend.dev>",
     to: recipients,
     subject: "Formulario de Contacto Página web",
