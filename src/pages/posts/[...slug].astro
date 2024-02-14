@@ -6,7 +6,6 @@ import CbhButton from "../../components/cbhbutton/CbhButton.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("posts");
-  console.log(blogEntries);
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },

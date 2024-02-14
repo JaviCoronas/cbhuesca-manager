@@ -6,8 +6,6 @@ import type { Page } from "astro";
 import Pagination from "../../components/pagination/Pagination.astro";
 const pageTitle = "Noticias";
 
-const allPosts = await getCollection("posts");
-
 type Props = {
   page: Page<CollectionEntry<"posts">>;
 };

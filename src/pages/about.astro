@@ -3,6 +3,7 @@ import "../styles/global.css";
 import { Image } from "astro:assets";
 import alexVolantin from "../../public/assets/alexVolantin.webp";
 import GlobalLayout from "../layouts/GlobalLayout.astro";
+import ImagesGallery from "../components/imagesgallery/ImagesGallery.astro";
 
 const pageTitle = "El Club";
 ---
@@ -67,6 +68,7 @@ const pageTitle = "El Club";
         </div>
       </div>
     </div>
+    <ImagesGallery />
   </div>
   <style>
     .animate-slide-in {
