@@ -12,7 +12,7 @@ const images = await getAllImages(folder);
     images.map((image, index) => (
       <div class="m-5 hover:cursor-pointer hover:scale-105 transition duration-500 ">
         <a href={image.data.publicUrl} target="_blank">
-          <Image
+          <img
             src={image.data.publicUrl}
             alt={`Thumbnail ${index}`}
             height="400"

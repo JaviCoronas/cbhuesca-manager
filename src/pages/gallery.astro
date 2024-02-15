@@ -38,10 +38,10 @@ const galleries = await getAllGalleries();
       {
         galleries?.map((element: IGallery) => (
           <a
-            class="flex flex-col items-center justify-center w-96 m-5 rounded-xl hover:cursor-pointer shadow-lg bg-white"
+            class="flex flex-col items-center justify-center w-96 m-5 rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500  shadow-lg bg-white"
             href={`/gallery/${element.gallery_shared_folder}`}
           >
-            <Image
+            <img
               src={element.thumbnail}
               alt={`Thumbnail ${element.thumbnail}`}
               width={450}
