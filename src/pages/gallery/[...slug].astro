@@ -1,11 +1,7 @@
 ---
 import GlobalLayout from "../../layouts/GlobalLayout.astro";
 import ImagesGallery from "../../components/imagesgallery/ImagesGallery.astro";
-import {
-  getAllGalleries,
-  getAllImages,
-  IGallery,
-} from "../../pages/api/images";
+import { getAllGalleries } from "../../pages/api/images";
 
 export async function getStaticPaths() {
   const galleries = await getAllGalleries();
@@ -16,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const pageTitle = "Galería de fotos: " + entry.name;
+const pageTitle = entry.name;
 ---
 
 <GlobalLayout pageTitle={pageTitle}>

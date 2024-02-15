@@ -1,6 +1,7 @@
 ---
 import { imageMetadata } from "astro/assets/utils";
 import { getAllGalleries, getAllImages } from "../../pages/api/images";
+import { Image } from "astro:assets";
 
 const { folder } = Astro.props;
 const images = await getAllImages(folder);
@@ -9,12 +10,15 @@ const images = await getAllImages(folder);
 <div class="flex md:flex-row flex-col">
   {
     images.map((image, index) => (
-      <div class="m-5 hover:cursor-pointer hover:animate-pulse hover:animate-once">
+      <div class="m-5 hover:cursor-pointer hover:scale-105 transition duration-500 ">
         <a href={image.data.publicUrl} target="_blank">
-          <img
+          <Image
             src={image.data.publicUrl}
             alt={`Thumbnail ${index}`}
-            style={{ width: "400px", height: "400px", objectFit: "cover" }}
+            height="400"
+            width="300"
+            loading="lazy"
+            style="height: 100%; width: 100%; object-fit: cover;"
           />
         </a>
       </div>

@@ -3,12 +3,17 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			animation: {
+				'spin': 'spin 3s linear infinite',
+			}
+		},
 		fontFamily: {
         sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
       },
 	},
 	plugins: [
 		require('@tailwindcss/typography'),
+		require('tailwindcss-animated')
 	],
 }
