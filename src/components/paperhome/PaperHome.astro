@@ -44,8 +44,21 @@ export const papers: PapersInterface[] = [
 ---
 
 <div
-  class="flex flex-col md:flex-row justify-center shadow-xl m-25 bg-white md:w-3/4 rounded-xl animate-slide-down"
+  class="md:flex md:flex-row justify-center shadow-xl m-25 bg-white md:w-3/4 rounded-xl animate-slide-down hidden h-fit"
 >
+  {
+    papers.map((paper) => (
+      <PaperCard
+        title={paper.title}
+        src={paper.src}
+        resume={paper.resume}
+        iconsvg={paper.iconsvg}
+        href={paper.href}
+      />
+    ))
+  }
+</div>
+<div class="md:hidden bg-white rounded-xl h-full">
   {
     papers.map((paper) => (
       <PaperCard
