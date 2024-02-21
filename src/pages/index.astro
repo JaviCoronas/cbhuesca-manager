@@ -3,6 +3,7 @@ import back from "../../public/assets/homeBackground.webp";
 import GlobalLayout from "../layouts/GlobalLayout.astro";
 import CbhButton from "../components/cbhbutton/CbhButton.astro";
 import PaperHome from "../components/paperhome/PaperHome.astro";
+import LastNews from "../components/lastNews/LastNews.astro";
 import "../styles/global.css";
 
 const pageTitle = "Club Bádminton Huesca";
@@ -29,6 +30,9 @@ const pageTitle = "Club Bádminton Huesca";
     </div>
   </div>
   <div class="w-full h-[80rem] md:h-60 bg-slate-200"></div>
+  <div class="flex flex-col justify-center items-center">
+    <LastNews />
+  </div>
 </GlobalLayout>
 <style>
   .animate-slide-in {

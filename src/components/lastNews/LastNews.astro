@@ -1,0 +1,51 @@
+---
+import { getCollection, type CollectionEntry, getEntries } from "astro:content";
+
+const blogEntries = await getCollection("posts");
+const firstblogEntries = blogEntries.reverse().slice(0, 10);
+console.log(blogEntries);
+
+const getString = (string: String) => {
+  return string.slice(0, 30).concat("...");
+};
+---
+
+<div class="flex flex-col justify-center items-center md:w-3/4">
+  <div class="w-full">
+    <h2 class="font-sans text-4xl">
+      <strong class="text-5xl font-sans">ULTIMAS</strong> NOTICIAS
+    </h2>
+    <div class="flex md:flex-row flex-col flex-wrap w-full justify-center">
+      {
+        firstblogEntries.map((content) => (
+          <a
+            class="relative md:w-1/6 w-full h-64 m-3 animate-zoom cursor-pointer shadow-xl"
+            href={`/posts/${content.slug}`}
+          >
+            <div class="absolute inset-0 rounded-xl overflow-hidden">
+              <div class="bg-gradient-to-b from-transparent to-black w-full h-full absolute" />
+              {/* Imagen */}
+              <img
+                class="w-full h-full object-cover bg-no-repeat bg-cover z-10"
+                src={content?.data?.coverImage}
+                alt={content?.data?.title}
+              />
+            </div>
+
+            <div class="absolute bottom-2 left-2">
+              <h3 class="text-lg text-white font-bold overflow-hidden max-h-14 overflow-ellipsis max-w-xs">
+                {getString(content?.data?.title)}
+              </h3>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>
+<style>
+  .animate-zoom:hover {
+    animation: animate-zoom 1s;
+    animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+  }
+</style>
