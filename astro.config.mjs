@@ -13,5 +13,12 @@ export default defineConfig({
   adapter: node({
     mode: "standalone"
   }),
-  adapter: netlify()
+  adapter: netlify(),
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+    imageService: true,
+    maxDuration: 8,
+  }),
 });
