@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import netlify from '@astrojs/netlify';
+import vercel from '@astrojs/vercel/serverless';
 
 import node from "@astrojs/node";
 
