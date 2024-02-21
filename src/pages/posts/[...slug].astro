@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import GlobalLayout from "../../layouts/GlobalLayout.astro";
-import { Image } from "astro:assets";
 import CbhButton from "../../components/cbhbutton/CbhButton.astro";
 
 export async function getStaticPaths() {
@@ -21,7 +20,7 @@ const { Content } = await entry.render();
   <div class="container mx-auto flex flex-col w-2/3 shadow-2xl">
     <main class="flex-grow">
       <div class="flex flex-col justify-center items-center w-full text-black">
-        <Image
+        <img
           alt="badmin"
           src={entry.data.coverImage}
           height={200}
