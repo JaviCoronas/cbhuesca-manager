@@ -11,14 +11,14 @@ const paginationList = Array.from(posts.lastPage, (_, i) => i + 1);
 >
   <div class="flex flex-1 justify-between sm:hidden">
     <a
-      href="#"
+      href={posts.url.prev}
       class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-      >Previous</a
+      >Anterior</a
     >
     <a
-      href="#"
+      href={posts.url.next}
       class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-      >Next</a
+      >Siguiente</a
     >
   </div>
   <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
@@ -26,11 +26,11 @@ const paginationList = Array.from(posts.lastPage, (_, i) => i + 1);
       <p class="text-sm text-gray-700">
         Mostrando
         <span class="font-medium">{showingFrom}</span>
-         a
+        a
         <span class="font-medium">{showingTo}</span>
-         de
+        de
         <span class="font-medium">{totalResults}</span>
-         resultados
+        resultados
       </p>
     </div>
     <div>
