@@ -15,11 +15,13 @@ const getString = (string: String) => {
     <h2 class="font-sans text-4xl">
       <strong class="text-5xl font-sans">ULTIMAS</strong> NOTICIAS
     </h2>
-    <div class="flex md:flex-row flex-col flex-wrap w-full justify-center">
+    <div
+      class="flex md:flex-row flex-col flex-wrap w-full justify-center p-1 items-center"
+    >
       {
         firstblogEntries.map((content) => (
           <a
-            class="relative md:w-1/6 w-full h-64 m-3 animate-zoom cursor-pointer shadow-xl"
+            class="relative md:w-1/6 w-full h-64 md:m-3 mb-2 animate-zoom cursor-pointer shadow-xl"
             href={`/posts/${content.slug}`}
           >
             <div class="absolute inset-0 rounded-xl overflow-hidden">
