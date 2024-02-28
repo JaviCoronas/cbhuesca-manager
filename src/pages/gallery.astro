@@ -34,12 +34,14 @@ const galleries = await getAllGalleries();
         </div>
       </div>
     </div>
-    <div class="flex flex-wrap">
-      {
-        galleries?.map((element: IGallery) => (
-          <>
+    <div
+      class="flex flex-row justify-center items-center font-sans mt-2 md:mr-10 md:ml-10 mr-3 ml-3"
+    >
+      <div class="flex flex-row flex-wrap md:flex-nowrap md:w-2/3 w-full">
+        {
+          galleries?.map((element: IGallery) => (
             <a
-              class="relative md:w-1/6 w-full h-64 m-2 animate-zoom cursor-pointer shadow-xl"
+              class="relative md:w-1/2 w-full h-64 m-2 animate-zoom cursor-pointer shadow-xl"
               href={`/gallery/${element.gallery_shared_folder}`}
             >
               <div class="absolute inset-0 rounded-xl overflow-hidden">
@@ -58,9 +60,9 @@ const galleries = await getAllGalleries();
                 </h3>
               </div>
             </a>
-          </>
-        ))
-      }
+          ))
+        }
+      </div>
     </div>
   </div>
 </GlobalLayout>
