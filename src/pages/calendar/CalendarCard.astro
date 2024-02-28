@@ -90,7 +90,7 @@ const getOrg = (organization: String) => {
     <small
       class="text-s text-slate-700 font-bold overflow-hidden max-h-14 overflow-ellipsis max-w-xs ml-2"
     >
-      {dateToLocalString(element?.date)}
+      {dateToLocalString(element?.date && "")}
       <small></small>
       <p class="text-lg text-black font-bold max-w-full md:text-3xl ml-2">
         {element.name}
