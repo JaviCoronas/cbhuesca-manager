@@ -3,7 +3,6 @@ import { getCollection, type CollectionEntry, getEntries } from "astro:content";
 
 const blogEntries = await getCollection("posts");
 const firstblogEntries = blogEntries.reverse().slice(0, 10);
-console.log(blogEntries);
 
 const getString = (string: String) => {
   return string.slice(0, 30).concat("...");

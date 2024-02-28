@@ -37,21 +37,36 @@ const galleries = await getAllGalleries();
     <div class="flex flex-wrap">
       {
         galleries?.map((element: IGallery) => (
-          <a
-            class="flex flex-col items-center justify-center w-96 m-5 rounded-xl hover:cursor-pointer hover:scale-105 transition duration-500  shadow-lg bg-white"
-            href={`/gallery/${element.gallery_shared_folder}`}
-          >
-            <img
-              src={element.thumbnail}
-              alt={`Thumbnail ${element.thumbnail}`}
-              width={450}
-              height={300}
-              style={{ objectFit: "cover", borderRadius: "10px" }}
-            />
-            <h4 class="font-sans text-xl p-3">{element.name}</h4>
-          </a>
+          <>
+            <a
+              class="relative md:w-1/6 w-full h-64 m-2 animate-zoom cursor-pointer shadow-xl"
+              href={`/gallery/${element.gallery_shared_folder}`}
+            >
+              <div class="absolute inset-0 rounded-xl overflow-hidden">
+                <div class="bg-gradient-to-b from-transparent to-black w-full h-full absolute" />
+                {/* Imagen */}
+                <img
+                  class="w-full h-full object-cover bg-no-repeat bg-cover z-10"
+                  src={element.thumbnail}
+                  alt={`Thumbnail ${element.thumbnail}`}
+                />
+              </div>
+
+              <div class="absolute bottom-2 left-2">
+                <h3 class="text-lg text-white font-bold overflow-hidden max-h-14 overflow-ellipsis max-w-xs">
+                  {element?.name}
+                </h3>
+              </div>
+            </a>
+          </>
         ))
       }
     </div>
   </div>
 </GlobalLayout>
+<style>
+  .animate-zoom:hover {
+    animation: animate-zoom 1s;
+    animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+  }
+</style>
