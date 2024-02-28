@@ -8,6 +8,7 @@ export interface Tournament {
   draw: string;
   location: string;
   category: string;
+  org: string;
 }
 
 export async function getAllTournaments(): Promise<Tournament[] | null> {

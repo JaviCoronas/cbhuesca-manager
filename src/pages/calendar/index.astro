@@ -2,6 +2,7 @@
 import CbhButton from "../../components/cbhbutton/CbhButton.astro";
 import GlobalLayout from "../../layouts/GlobalLayout.astro";
 import ButtonTable from "./ButtonTable.astro";
+import CalendarCard from "./CalendarCard.astro";
 import {
   getAllTournaments,
   type Tournament,
@@ -28,7 +29,7 @@ const data = await getAllTournaments();
       </div>
     </div>
   </div>
-  <div class="flex items-center justify-center w-full">
+  <div class="flex items-center justify-center w-full bg-slate-300">
     <div class="container hidden md:block">
       <table
         class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5"
@@ -84,23 +85,10 @@ const data = await getAllTournaments();
         </tbody>
       </table>
     </div>
-    <div class="visile md:hidden m-2">
-      {
-        data.map((element: any) => (
-          <div class="flex flex-col flex-no wrap border border-gray-300 p-3 rounded-lg gap-1 shadow-md m-2">
-            <small class="pb-3 font-sans font-light text-slate-500">
-              {element.date}
-            </small>
-            <h4 class=" text-lg pb-3 font-sans">{element.name}</h4>
-            <div class="flex justify-center items-center">
-              <ButtonTable title="Inscripción" href={element.inscription} />
-            </div>
-            <div class="flex justify-center items-center">
-              <ButtonTable title="Cuadro" href={element.draw} />
-            </div>
-          </div>
-        ))
-      }
+    <div
+      class="container ml-7 w-full visile md:hidden justify-center items-center"
+    >
+      {data.map((element: Tournament) => <CalendarCard element={element} />)}
     </div>
   </div>
 </GlobalLayout>
