@@ -24,7 +24,7 @@ const getOrg = (organization: String) => {
   <div class="absolute top-0 left-0 w-full h-1/2 overflow-hidden rounded-xl">
     <img
       class="w-2/3 h-full object-scale-down p-2"
-      src={getOrg(element.org)}
+      src={getOrg(element?.org && "")}
       alt={`Thumbnail image`}
     />
   </div>
