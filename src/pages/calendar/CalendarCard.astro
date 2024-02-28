@@ -1,7 +1,4 @@
 ---
-import { type Tournament } from "../../pages/api/tournaments/tournaments";
-import { dateToLocalString } from "../../utils/DateUtils";
-
 const { element } = Astro.props;
 
 const getOrg = (organization: String) => {
@@ -16,6 +13,49 @@ const getOrg = (organization: String) => {
       return "./assets/logos/bad_spain2.jpeg";
   }
 };
+
+export const dateToLocalString = (date: String) => {
+  const meses = [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre",
+  ];
+
+  const partes = date.split("-");
+
+  if (partes.length !== 3) {
+    // La cadena no tiene el formato esperado
+    return null;
+  }
+
+  const dia = parseInt(partes[2], 10);
+  const mesIndex = parseInt(partes[1], 10) - 1;
+
+  if (
+    isNaN(dia) ||
+    isNaN(mesIndex) ||
+    mesIndex < 0 ||
+    mesIndex >= meses.length ||
+    dia < 1 ||
+    dia > 31
+  ) {
+    // La cadena contiene valores inválidos
+    return null;
+  }
+
+  const mes = meses[mesIndex];
+
+  return `${dia} de ${mes}`;
+};
 ---
 
 <div
@@ -24,7 +64,7 @@ const getOrg = (organization: String) => {
   <div class="absolute top-0 left-0 w-full h-1/2 overflow-hidden rounded-xl">
     <img
       class="w-2/3 h-full object-scale-down p-2"
-      src={getOrg(element?.org && "")}
+      src={getOrg(element?.org || "")}
       alt={`Thumbnail image`}
     />
   </div>
@@ -90,7 +130,7 @@ const getOrg = (organization: String) => {
     <small
       class="text-s text-slate-700 font-bold overflow-hidden max-h-14 overflow-ellipsis max-w-xs ml-2"
     >
-      {dateToLocalString(element?.date && "")}
+      {dateToLocalString(element?.date || "")}
       <small></small>
       <p class="text-lg text-black font-bold max-w-full md:text-3xl ml-2">
         {element.name}
