@@ -9,6 +9,8 @@ const getOrg = (organization: String) => {
       return "./assets/logos/bad_farba.jpeg";
     case "CAT":
       return "./assets/logos/bad_cat.jpeg";
+    case "PV":
+      return "./assets/logos/bad_pvasco.jpeg";
     default:
       return "./assets/logos/bad_spain2.jpeg";
   }
@@ -68,8 +70,8 @@ export const dateToLocalString = (date: String) => {
       alt={`Thumbnail image`}
     />
   </div>
-  <div class="absolute top-0 right-0">
-    <div class="m-1">
+  <div class="absolute top-0 right-0 m-2">
+    <a class="m-0.5" href={element?.inscription || ""}>
       <svg
         width="48px"
         height="48px"
@@ -85,7 +87,8 @@ export const dateToLocalString = (date: String) => {
             width="32.16"
             height="32.16"
             rx="16.08"
-            fill="#000000"></rect></g
+            fill={element?.inscription != null ? "#000000" : "#ffffff"}
+          ></rect></g
         ><g
           id="SVGRepo_tracerCarrier"
           stroke-linecap="round"
@@ -97,8 +100,8 @@ export const dateToLocalString = (date: String) => {
             fill="#ffffff"></path></g
         ></svg
       >
-    </div>
-    <div class="m-1">
+    </a>
+    <a class="" href={element?.draw || ""}>
       <svg
         width="48px"
         height="48px"
@@ -113,7 +116,8 @@ export const dateToLocalString = (date: String) => {
             width="31.20"
             height="31.20"
             rx="15.6"
-            fill="#000000"></rect></g
+            fill={element?.inscription || "" != null ? "#000000" : "#ffffff"}
+          ></rect></g
         ><g
           id="SVGRepo_tracerCarrier"
           stroke-linecap="round"
@@ -124,13 +128,13 @@ export const dateToLocalString = (date: String) => {
             stroke-width="2"></path>
         </g></svg
       >
-    </div>
+    </a>
   </div>
   <div class="absolute bottom-2">
     <small
       class="text-s text-slate-700 font-bold overflow-hidden max-h-14 overflow-ellipsis max-w-xs ml-2"
     >
-      {dateToLocalString(element?.date || "")}
+      {dateToLocalString(element?.date || "") + " - " + element?.location}
       <small></small>
       <p class="text-lg text-black font-bold max-w-full md:text-3xl ml-2">
         {element?.name || ""}
