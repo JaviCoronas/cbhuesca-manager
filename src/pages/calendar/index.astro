@@ -30,63 +30,8 @@ const data = await getAllTournaments();
     </div>
   </div>
   <div class="flex items-center justify-center w-full bg-slate-300">
-    <div class="container hidden md:block">
-      <table
-        class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5"
-      >
-        <thead class="text-white md:visible invisible">
-          <tr
-            class="bg-black flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0"
-          >
-            <th class="p-3 text-left">Fecha</th>
-            <th class="p-3 text-left">Nombre</th>
-            <th class="p-3 text-left">
-              <div class="flex justify-center items-center">Sede</div>
-            </th>
-            <th class="p-3 text-left">
-              <div class="flex justify-center items-center">Categoría</div>
-            </th>
-            <th class="p-3 text-left"></th>
-            <th class="p-3 text-left"></th>
-          </tr>
-        </thead>
-        <tbody class="flex-1 sm:flex-none">
-          {
-            data.map((element: Tournament) => (
-              <tr class="flex flex-col sm:table-row mb-2 sm:mb-0 hover:bg-gray-100">
-                <td class="p-3 w-32">{element.date}</td>
-                <td class="p-3 truncate">{element.name}</td>
-                <td class="p-3 truncate w-32">
-                  <div class="flex justify-center items-center">
-                    {element.location}
-                  </div>
-                </td>
-                <td class="p-3 truncate w-32">
-                  <div class="flex justify-center items-center">
-                    {element.category}
-                  </div>
-                </td>
-                <td class="">
-                  <div class="flex justify-center items-center">
-                    <ButtonTable
-                      title="Inscripción"
-                      href={element.inscription}
-                    />
-                  </div>
-                </td>
-                <td class="">
-                  <div class="flex justify-center items-center">
-                    <ButtonTable title="Cuadro" href={element.draw} />
-                  </div>
-                </td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
-    </div>
     <div
-      class="container ml-7 w-full visile md:hidden justify-center items-center"
+      class="flex flex-col flex-wrap md:flex-row md:w-2/3 w-full justify-center items-center"
     >
       {data.map((element: Tournament) => <CalendarCard element={element} />)}
     </div>
