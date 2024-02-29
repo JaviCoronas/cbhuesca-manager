@@ -19,17 +19,17 @@ const Archivements: React.FC = () => {
     },
     {
       title: "Participaciones Selección Nacional",
-      text: "Aportaciones y resultados en comepticiones internacionales",
+      text: "Aportaciones y resultados en competiciones internacionales",
       colour: "#3a0ca3",
       icon: "/assets/icons/medalIcon.svg",
       number: 86,
     },
     {
       title: "Entrenadores titulados",
-      text: "4 entrenadores Nivel III, 2 entrenadores Nivel II, 6 de nivel ShuttleTime",
+      text: "4 entrenadores Nivel III, 2 entrenadores Nivel II, 9 de nivel ShuttleTime",
       colour: "#f72585",
       icon: "/assets/icons/badIcon.svg",
-      number: 12,
+      number: 15,
     },
   ];
 

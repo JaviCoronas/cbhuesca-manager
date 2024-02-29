@@ -64,29 +64,27 @@ export const dateToLocalString = (date: String) => {
 ---
 
 <div
-  class="relative flex flex-col md:flex-row md:w-96 m-1 h-64 shadow-xl rounded-xl bg-white mb-2 mt-2 w-64 hover:cursor-pointer hover:scale-105 transition duration-500"
+  class="relative flex flex-col md:w-96 m-1 h-64 shadow-xl rounded-xl bg-white mb-2 mt-2 w-64 hover:scale-105 transition duration-500"
 >
-  <div class="absolute top-0 left-0 w-full h-1/2 overflow-hidden rounded-xl">
+  <div class="flex w-full h-3/4 overflow-hidden rounded-xl justify-center">
     <img
       class="w-2/3 h-full object-scale-down p-2"
       src={getOrg(element?.org || "")}
       alt={`Thumbnail image`}
     />
   </div>
-  <div class="absolute top-0 right-0 m-2">
-    <InscriptionSvg element={element} />
-    <DrawSvg element={element} />
-  </div>
-  <div class="absolute bottom-2">
+  <div class="flex flex-col h-32">
     <small
       class="text-s text-slate-700 font-bold overflow-hidden max-h-14 overflow-ellipsis max-w-xs ml-2"
     >
       {dateToLocalString(element?.date || "") + " - " + element?.location}
-      <small></small>
-      <p class="text-lg text-black font-bold max-w-full md:text-3xl ml-2">
-        {element?.name || ""}
-        <p></p>
-      </p>
     </small>
+    <p class="text-lg text-black font-bold max-w-full md:text-3xl ml-2 mb-3">
+      {element?.name || ""}
+    </p>
+  </div>
+  <div class="flex flex-row">
+    <InscriptionSvg element={element} />
+    <DrawSvg element={element} />
   </div>
 </div>

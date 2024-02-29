@@ -2,7 +2,12 @@
 const { element } = Astro.props;
 ---
 
-<a class="m-0.5" href={element?.inscription || ""}>
+<a
+  class={element?.inscription != null
+    ? "flex flex-row mb-1 ml-1 w-36 md:w-1/2 bg-black text-white rounded-xl justify-center items-center cursor-pointer"
+    : "flex flex-row m-1 w-1/2 bg-white text-white rounded-xl"}
+  href={element?.inscription || ""}
+>
   <svg
     width="48px"
     height="48px"
@@ -11,6 +16,7 @@ const { element } = Astro.props;
     xmlns="http://www.w3.org/2000/svg"
     stroke="#ffffff"
     stroke-width="0.00024000000000000003"
+    class="flex"
     ><g id="SVGRepo_bgCarrier" stroke-width="0"
       ><rect
         x="-4.08"
@@ -30,4 +36,9 @@ const { element } = Astro.props;
         fill="#ffffff"></path></g
     ></svg
   >
+  <small
+    class="flex justify-center items-center text-center mr-1.5 md:text-xl text-sm"
+  >
+    Inscripción
+  </small>
 </a>

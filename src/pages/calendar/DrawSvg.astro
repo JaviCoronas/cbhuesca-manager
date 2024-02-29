@@ -2,14 +2,20 @@
 const { element } = Astro.props;
 ---
 
-<a class="" href={element?.draw || ""}>
+<a
+  class={element?.draw != null
+    ? "flex flex-row mb-1 mr-1 ml-1 w-36 md:w-1/2 bg-black text-white rounded-xl justify-center items-center cursor-pointer"
+    : "invisible"}
+  href={element?.draw || ""}
+>
   <svg
-    width="48px"
-    height="48px"
+    width="42px"
+    height="42px"
     viewBox="-3.6 -3.6 31.20 31.20"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     stroke="#ffffff"
+    class="flex justify-left items-center"
     ><g id="SVGRepo_bgCarrier" stroke-width="0"
       ><rect
         x="-3.6"
@@ -29,4 +35,9 @@ const { element } = Astro.props;
         stroke-width="2"></path>
     </g></svg
   >
+  <small
+    class="flex justify-center items-center text-center mr-1.5 md:text-xl text-sm"
+  >
+    Cuadro
+  </small>
 </a>
