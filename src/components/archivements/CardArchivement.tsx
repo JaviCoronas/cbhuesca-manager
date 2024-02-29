@@ -6,6 +6,7 @@ interface CardData {
   number: number;
   text: string;
   colour: string;
+  icon: string;
 }
 
 const CardArchivement: React.FC<{ data: CardData[] }> = ({ data }) => {
@@ -80,10 +81,11 @@ const CardArchivement: React.FC<{ data: CardData[] }> = ({ data }) => {
           }}
           key={index}
         >
-          <h2 className="flex top-0 mt-3 h-44 font-bold text-xl">
+          <h2 className="flex top-0 mt-3 h-56 font-bold text-xl mb-5">
             {item.title}
           </h2>
-          <p>{item.text}</p>
+          <p className="flex h-40">{item.text}</p>
+          <img className="h-12 w-12 mt-4" src={item.icon} alt="Tu Icono" />
           <div
             className="flex text-6xl h-full justify-center items-center"
             ref={(el) =>
@@ -93,7 +95,7 @@ const CardArchivement: React.FC<{ data: CardData[] }> = ({ data }) => {
               })
             }
           >
-            p
+            p c
           </div>
         </div>
       ))}

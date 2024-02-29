@@ -7,24 +7,28 @@ const Archivements: React.FC = () => {
       title: "Socios",
       text: "Todos somos parte de la familia",
       colour: "#7209b7",
+      icon: "../../../public/assets/icons/community.svg",
       number: 158,
     },
     {
       title: "Medallas en Campeonatos de España",
       text: "Grandes logros de nuestros jugadores",
       colour: "#4361ee",
+      icon: "../../../public/assets/icons/trophyIcon.svg",
       number: 34,
     },
     {
       title: "Participaciones Selección Nacional",
       text: "Aportaciones y resultados en comepticiones internacionales",
       colour: "#3a0ca3",
+      icon: "../../../public/assets/icons/medalIcon.svg",
       number: 86,
     },
     {
       title: "Entrenadores titulados",
       text: "4 entrenadores Nivel III, 2 entrenadores Nivel II, 6 de nivel ShuttleTime",
       colour: "#f72585",
+      icon: "../../../public/assets/icons/badIcon.svg",
       number: 12,
     },
   ];
