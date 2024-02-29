@@ -7,18 +7,25 @@ const { folder } = Astro.props;
 const images = await getAllImages(folder);
 ---
 
-<div class="flex md:flex-row flex-col">
+<div
+  class="flex md:flex-row flex-wrap flex-col md:w-3/4 md:h-viewjustify-center"
+>
   {
     images.map((image, index) => (
-      <div class="m-5 hover:cursor-pointer hover:scale-105 transition duration-500 ">
-        <a href={image.data.publicUrl} target="_blank">
+      <div class="m-5 hover:cursor-pointer hover:scale-105 transition duration-500">
+        <a
+          href={image.data.publicUrl}
+          target="_blank"
+          class="flex flex-wrap h-96 m-2 w-64"
+        >
           <img
             src={image.data.publicUrl}
             alt={`Thumbnail ${index}`}
             height="400"
             width="300"
             loading="lazy"
-            style="height: 100%; width: 100%; object-fit: cover;"
+            decoding="async"
+            class="h-full w-full object-cover"
           />
         </a>
       </div>
