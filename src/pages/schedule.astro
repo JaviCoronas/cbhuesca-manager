@@ -1,0 +1,333 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+
+const pageTitle = "Horario";
+---
+
+<GlobalLayout pageTitle={pageTitle}>
+  <di class="flex flex-col w-full justify-center items-center">
+    <div
+      class="flex flex-col h-30 items-center justify-center bg-cover bg-center w-full"
+      style="background-image: url('/assets/aboutHeader.webp');"
+    >
+      <div class="flex-none">
+        <div class="flex flex-col items-center justify-center h-36 md:h-96">
+          <h1
+            class="text-3xl md:text-5xl lg:text-6xl text-white font-sans font-extrabold text-center mb-4 z-10"
+          >
+            {pageTitle.toUpperCase()}
+          </h1>
+          <p class="text-lg text-white text-center z-10 font-sans"></p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col w-full md:w-3/4 justify-center items mt-5 mb-5 ml-1"
+    >
+      <h2 class="font-sans text-4xl">
+        <strong class="text-5xl font-sans">CURSO</strong> 2023 / 2024
+      </h2>
+      <p class="font-sans m-2 text-center">
+        Estos son los horarios habituales en nuestras instalaciones, si quieres
+        alquilar alguna de las pistas para disfrutar con tus amigos o familia,
+        no dudes en ponerte en contacto con nosotros mediante el formulario de
+        contacto al final de la página.
+      </p>
+    </div>
+    <div class="hidden md:block">
+      <table
+        class="w-full font-sans border-spacing-2 border-separate"
+        style={{ borderSpacing: "5px", borderCollapse: "separate" }}
+      >
+        <thead
+          class="bg-slate-200 rounded-xl font-sans text-lg"
+          style="height: 50px"
+        >
+          <tr>
+            <th class="p-2 rounded-xl" style="width: 160px">Horas</th>
+            <th class="p-2 rounded-xl" style="width: 170px">Lunes</th>
+            <th class="p-2 rounded-xl" style="width: 170px">Martes</th>
+            <th class="p-2 rounded-xl" style="width: 170px">Miércoles</th>
+            <th class="p-2 rounded-xl" style="width: 170px">Jueves</th>
+            <th class="p-2 rounded-xl" style="width: 170px">Viernes</th>
+            <th class="p-2 rounded-xl" style="width: 170px">Sábado</th>
+            <th class="p-2 rounded-xl" style="width: 170px">Domingo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Filas de horarios -->
+          <tr class="text-center h-24">
+            <td
+              class="rounded-xl font-bold"
+              style={{ backgroundColor: "#e2e8ef", margin: "2rem" }}
+            >
+              08:00 - 10:00</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#7209b7", margin: "2rem" }}
+            >
+              Esc. Tecnificación</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#7209b7", margin: "2rem" }}
+            >
+              Esc. Tecnificación</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#7209b7", margin: "2rem" }}
+            >
+              Esc. Tecnificación</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#7209b7", margin: "2rem" }}
+            >
+              Esc. Tecnificación</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#7209b7", margin: "2rem" }}
+            >
+              Esc. Tecnificación</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4cc9f0", margin: "2rem" }}
+            >
+              Libre</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4cc9f0", margin: "2rem" }}
+            >
+              Libre</td
+            >
+          </tr>
+          <tr class="text-center h-24">
+            <td
+              class="rounded-xl font-bold"
+              style={{ backgroundColor: "#e2e8ef", margin: "2rem" }}
+              >17:00 - 18:30</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#f72585", margin: "2rem" }}
+              >Iniciación / Grupo tecnificación
+            </td>
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#f72585", margin: "2rem" }}
+              >Iniciación / Grupo tecnificación
+            </td>
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#f72585", margin: "2rem" }}
+              >Iniciación / Grupo tecnificación
+            </td>
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#f72585", margin: "2rem" }}
+              >Iniciación / Grupo tecnificación
+            </td>
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#f72585", margin: "2rem" }}
+              >Iniciación / Grupo tecnificación
+            </td>
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4cc9f0", margin: "2rem" }}
+            >
+              Libre</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4cc9f0", margin: "2rem" }}
+            >
+              Libre</td
+            >
+          </tr>
+          <tr class="text-center h-24">
+            <td
+              class="rounded-xl font-bold"
+              style={{ backgroundColor: "#e2e8ef", margin: "2rem" }}
+              >18:30 - 20:00</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4361ee", margin: "2rem" }}
+              >Grupo institutos</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4361ee", margin: "2rem" }}
+              >Grupo institutos</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4361ee", margin: "2rem" }}
+              >Grupo institutos</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4361ee", margin: "2rem" }}
+              >Grupo institutos</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#3a0ca3", margin: "2rem" }}
+            >
+              Alta competición
+            </td>
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4cc9f0", margin: "2rem" }}
+            >
+              Libre</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4cc9f0", margin: "2rem" }}
+            >
+              Libre</td
+            >
+          </tr>
+          <tr class="text-center h-24">
+            <td
+              class="rounded-xl font-bold"
+              style={{ backgroundColor: "#e2e8ef", margin: "2rem" }}
+              >20:00 - 22:00</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#3a0ca3", margin: "2rem" }}
+            >
+              Alta competición
+            </td>
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#3a0ca3", margin: "2rem" }}
+            >
+              Alta competición
+            </td>
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#3a0ca3", margin: "2rem" }}
+            >
+              Alta competición
+            </td>
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#3a0ca3", margin: "2rem" }}
+            >
+              Alta competición
+            </td>
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4cc9f0", margin: "2rem" }}
+            >
+              Libre</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4cc9f0", margin: "2rem" }}
+            >
+              Libre</td
+            >
+            <td
+              class="rounded-xl text-white"
+              style={{ backgroundColor: "#4cc9f0", margin: "2rem" }}
+            >
+              Libre</td
+            >
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="md:hidden flex flex-col justify-center items-center w-full">
+      <div
+        class="flex flex-col w-72 h-72 m-2 text-center items-start rounded-xl"
+      >
+        <div class="text-2xl bg-slate-300 w-full rounded-xl">
+          <p>Lunes-Jueves</p>
+        </div>
+        <div class="text-l bg-slate-300 w-full rounded-xl mt-1"></div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>08:00 - 10:00</small>
+          Escuela de Tecnificación
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m w-full rounded-xl mt-2 h-12 text-white"
+          style={{ backgroundColor: "#f72585" }}
+        >
+          <small>17:00 - 18:30</small>
+          Iniciación / Grupo tecnificación
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#4361ee] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>18:30 - 20:00</small>
+          Grupo Institutos
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#3a0ca3] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>20:00 - 22:00</small>
+          Alta competición
+        </div>
+      </div>
+      <div
+        class="flex flex-col w-72 h-56 m-2 text-center items-start rounded-xl"
+      >
+        <div class="text-2xl bg-slate-300 w-full rounded-xl">
+          <p>Viernes</p>
+        </div>
+        <div class="text-l bg-slate-300 w-full rounded-xl mt-1"></div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>08:00 - 10:00</small>
+          Escuela de Tecnificación
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m w-full rounded-xl mt-2 h-12 text-white"
+          style={{ backgroundColor: "#f72585" }}
+        >
+          <small>17:00 - 18:30</small>
+          Iniciación / Grupo tecnificación
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#3a0ca3] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>18:30 - 20:00</small>
+          Alta competición
+        </div>
+      </div>
+      <div
+        class="flex flex-col w-72 h-36 m-2 text-center items-start rounded-xl"
+      >
+        <div class="text-2xl bg-slate-300 w-full rounded-xl mt-2">
+          <p>Sábado - Domingo</p>
+        </div>
+        <div class="text-l bg-slate-300 w-full rounded-xl mt-1"></div>
+        <div
+          class="flex flex-col justify-center items-center text-m w-full rounded-xl mt-2 h-12 text-white"
+          style={{ backgroundColor: "#4cc9f0" }}
+        >
+          <small>Todo el día</small>
+          Libre
+        </div>
+      </div>
+      <p class="text-center">
+        Recuerda que en cualquiera de nuestros horarios hay pistas libres,
+        llámanos o contacta con nosotros mediante el formulario para alquilar
+        alguna de ellas!
+      </p>
+    </div>
+  </di>
+</GlobalLayout>
