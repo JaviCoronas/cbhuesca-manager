@@ -4,6 +4,7 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
 import CbhButton from "../components/cbhbutton/CbhButton.astro";
 import PaperHome from "../components/paperhome/PaperHome.astro";
 import LastNews from "../components/lastNews/LastNews.astro";
+import Archivements from "../components/archivements/Archievements";
 import "../styles/global.css";
 
 const pageTitle = "Club Bádminton Huesca";
@@ -30,6 +31,9 @@ const pageTitle = "Club Bádminton Huesca";
     </div>
   </div>
   <div class="w-full h-[75rem] md:h-60 bg-slate-200"></div>
+  <div class="flex flex-col justify-center items-center">
+    <Archivements client:load />
+  </div>
   <div class="flex flex-col justify-center items-center">
     <LastNews />
   </div>
