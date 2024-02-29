@@ -73,8 +73,11 @@ const CardArchivement: React.FC<{ data: CardData[] }> = ({ data }) => {
     <div className="flex md:flex-row flex-col justify-center items-center text-white">
       {data.map((item, index) => (
         <div
-          className={`m-2 shadow-xl flex flex-col h-96 md:w-64 w-72 justify-center items-center rounded-xl text-center`}
-          style={{ backgroundColor: item.colour }}
+          className={`m-2 p-2 shadow-xl flex flex-col h-96 md:w-64 w-72 justify-center items-center rounded-xl text-center`}
+          style={{
+            backgroundColor: item.colour,
+            boxShadow: `0 0 10px ${item.colour}`,
+          }}
           key={index}
         >
           <h2 className="flex top-0 mt-3 h-44 font-bold text-xl">
