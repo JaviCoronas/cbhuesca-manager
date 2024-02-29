@@ -74,18 +74,22 @@ const CardArchivement: React.FC<{ data: CardData[] }> = ({ data }) => {
     <div className="flex md:flex-row flex-col justify-center items-center text-white">
       {data.map((item, index) => (
         <div
-          className={`m-2 p-2 shadow-xl flex flex-col h-96 md:w-64 w-72 justify-center items-center rounded-xl text-center`}
+          className={`m-2 p-2 shadow-xl flex flex-col h-96 md:w-64 w-[90%] justify-center items-center rounded-xl text-center`}
           style={{
             backgroundColor: item.colour,
             boxShadow: `0 0 10px ${item.colour}`,
           }}
           key={index}
         >
-          <h2 className="flex top-0 mt-3 h-56 font-bold text-xl mb-5">
+          <h2 className="flex top-0 mt-3 h-56 font-bold md:text-xl text-2xl mb-5">
             {item.title}
           </h2>
           <p className="flex h-40">{item.text}</p>
-          <img className="h-12 w-12 mt-4" src={item.icon} alt="Tu Icono" />
+          <img
+            className="md:h-12 md:w-12 w-22 h-22 mt-4"
+            src={item.icon}
+            alt="Tu Icono"
+          />
           <div
             className="flex text-6xl h-full justify-center items-center"
             ref={(el) =>
@@ -94,9 +98,7 @@ const CardArchivement: React.FC<{ data: CardData[] }> = ({ data }) => {
                 targetNumber: item.number,
               })
             }
-          >
-            p c
-          </div>
+          ></div>
         </div>
       ))}
     </div>
