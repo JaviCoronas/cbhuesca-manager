@@ -22,8 +22,20 @@ const pageTitle = "Club Bádminton Huesca";
         Bádminton Huesca
       </h1>
       <div class="flex flex-col md:flex-row md:ml-32 ml-1">
-        <CbhButton title="Contacta con nosotros" href="/about" />
-        <CbhButton title="Reserva una pista" href="/about" />
+        <a
+          type="button"
+          id="scrollButton"
+          class="bg-black hover:bg-black text-white font-semibold hover:text-white py-2 px-4 md:m-6 m-2 border border-white hover:border-transparent rounded"
+        >
+          Contacta con nosotros
+        </a>
+        <a
+          type="button"
+          id="scrollButton"
+          class="bg-black hover:bg-black text-white font-semibold hover:text-white py-2 px-4 md:m-6 m-2 border border-white hover:border-transparent rounded"
+        >
+          Reserva una pista
+        </a>
       </div>
     </div>
     <div class="flex flex-col justify-center items-center mb-12 mt-12 md:mt-1">
@@ -50,3 +62,45 @@ const pageTitle = "Club Bádminton Huesca";
     animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
   }
 </style>
+<script>
+  document
+    .getElementById("scrollButton")
+    .addEventListener("click", function () {
+      const fullHeight = Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+      );
+
+      const scrollDuration = 3000; // Duración total del desplazamiento en milisegundos
+      const scrollStep = 40; // Píxeles desplazados en cada paso
+
+      // Calcula el número total de pasos
+      const totalSteps = Math.ceil(scrollDuration / scrollStep);
+
+      // Inicializa el paso actual
+      let currentStep = 0;
+
+      // Función de animación usando requestAnimationFrame
+      function scrollToBottom() {
+        currentStep++;
+        const percentage = currentStep / totalSteps;
+        const scrollTop = percentage * (fullHeight - window.innerHeight);
+
+        window.scrollTo({
+          top: scrollTop,
+          behavior: "auto", // 'auto' para un desplazamiento suave más lento
+        });
+
+        if (currentStep < totalSteps) {
+          // Continúa la animación
+          requestAnimationFrame(scrollToBottom);
+        }
+      }
+
+      // Inicia la animación
+      requestAnimationFrame(scrollToBottom);
+    });
+</script>

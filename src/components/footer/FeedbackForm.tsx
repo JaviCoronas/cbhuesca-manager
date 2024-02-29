@@ -16,6 +16,9 @@ const FeedbackForm = () => {
 
   return (
     <form onSubmit={submit}>
+      <h3 className="font-sans text-4xl mb-2">
+        <strong className="text-5xl font-sans">CONTACTA</strong> CON NOSOTROS
+      </h3>
       <div className="relative mb-3">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           <svg
@@ -85,7 +88,7 @@ const FeedbackForm = () => {
           placeholder="999 999 999"
         />
       </div>
-      <p className="">
+      <p className="mb-2">
         Escríbenos sobre qué quieres información, reservar pistas, cumpleaños,
         colaborar...
       </p>
