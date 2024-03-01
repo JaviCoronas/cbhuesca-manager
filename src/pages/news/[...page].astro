@@ -1,7 +1,6 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
 import GlobalLayout from "../../layouts/GlobalLayout.astro";
-import { Image } from "astro:assets";
 import type { Page } from "astro";
 import Pagination from "../../components/pagination/Pagination.astro";
 const pageTitle = "Noticias";
@@ -12,8 +11,8 @@ type Props = {
 
 export async function getStaticPaths({ paginate }: any) {
   const blogEntries = await getCollection("posts");
-  blogEntries.reverse();
-  return paginate(blogEntries, { pageSize: 5 });
+  const blogEntriesSorted = blogEntries.reverse();
+  return paginate(blogEntriesSorted, { pageSize: 5 });
 }
 
 const { page } = Astro.props;
