@@ -3,6 +3,7 @@ import React, { type FormEvent } from "react";
 const FeedbackForm = () => {
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    /*
     const formData = new FormData(e.target as HTMLFormElement);
     const response = await fetch("/api/email", {
       method: "POST",
@@ -12,6 +13,31 @@ const FeedbackForm = () => {
     if (response.status == 200) {
       alert("Mensaje mandado con éxito.");
     }
+    */
+    var nombre = document.getElementById("name").value;
+    var correo = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var mensaje = document.getElementById("message").value;
+
+    // Construir el enlace mailto con los valores del formulario
+    var mailtoLink =
+      "mailto:contacto@badmintonhuesca.es" +
+      "?subject=" +
+      encodeURIComponent("Formulario Web - Club bádminton Huesca") +
+      "&body=" +
+      encodeURIComponent(
+        "Nombre: " +
+          nombre +
+          "\nCorreo: " +
+          correo +
+          "\nTeléfono: " +
+          phone +
+          "\nMensaje: " +
+          mensaje
+      );
+
+    // Abrir el cliente de correo predeterminado con el enlace mailto
+    window.location.href = mailtoLink;
   }
 
   return (
