@@ -8,7 +8,7 @@ import {
   type Tournament,
 } from "../../pages/api/tournaments/tournaments";
 
-const pageTitle = "Calendario";
+const pageTitle = "Calendario Club";
 
 const data = await getAllTournaments();
 ---
@@ -25,7 +25,10 @@ const data = await getAllTournaments();
         >
           {pageTitle.toUpperCase()}
         </h1>
-        <p class="text-lg text-white text-center z-10 font-sans"></p>
+        <p class="text-lg text-white text-center z-10 font-sans">
+          Este es el calendario recomendado por el club para los próximos
+          eventos
+        </p>
       </div>
     </div>
   </div>

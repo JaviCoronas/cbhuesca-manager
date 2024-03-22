@@ -15,6 +15,7 @@ export async function getAllTournaments(): Promise<Tournament[] | null> {
   const { data, error } = await supabase
     .from("tournaments")
     .select("*")
+    .eq("active", true)
     .order("date", { ascending: false });
 
   if (error) {
