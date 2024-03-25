@@ -32,6 +32,21 @@ const NewCalendar = ({ tournaments }: { tournaments: any }) => {
     setOpenMonth((prevMonth) => (prevMonth === month ? null : month));
   };
 
+  const getOrg = (organization: String) => {
+    switch (organization) {
+      case "FESBA":
+        return "./assets/logos/bad_spain2.jpeg";
+      case "FARBA":
+        return "./assets/logos/bad_farba.jpeg";
+      case "CAT":
+        return "./assets/logos/bad_cat.jpeg";
+      case "PV":
+        return "./assets/logos/bad_pvasco.jpeg";
+      default:
+        return "./assets/logos/bad_spain2.jpeg";
+    }
+  };
+
   return (
     <>
       <div
@@ -50,7 +65,7 @@ const NewCalendar = ({ tournaments }: { tournaments: any }) => {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center w-full bg-slate-300">
+      <div className="flex items-center justify-center w-full">
         <div className="flex flex-col md:w-2/3 w-full justify-center items-center">
           {/* Renderizar acordeón por meses */}
           {Object.entries(tournamentsByMonth).map(([month, tournaments]) => (
@@ -63,12 +78,17 @@ const NewCalendar = ({ tournaments }: { tournaments: any }) => {
               </button>
               {/* Mostrar torneos si el mes está abierto */}
               {openMonth === month && (
-                <div className="flex flex-col ml-1 mr-1">
+                <div className="flex flex-col ml-1 mr-1 justify-center items">
                   {tournaments.map((tournament: any) => (
                     <div
                       key={tournament.id}
                       className="border border-black p-2 my-2"
                     >
+                      <img
+                        className="w-2/3 h-full object-scale-down p-2"
+                        src={getOrg(tournament?.org || "")}
+                        alt={`Thumbnail image`}
+                      />
                       <h2>{tournament.name}</h2>
                       {/* Renderizar otros detalles del torneo si es necesario */}
                     </div>
