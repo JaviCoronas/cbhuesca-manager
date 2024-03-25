@@ -22,6 +22,6 @@ export async function getAllTournaments(): Promise<Tournament[] | null> {
     console.error("Error obteniendo los datos", error);
     return;
   }
-
+  console.log("Tournaments data:", data);
   return data as Tournament[];
 }
