@@ -16,7 +16,7 @@ export async function getAllTournaments(): Promise<Tournament[] | null> {
     .from("tournaments")
     .select("*")
     .eq("active", true)
-    .order("date", { ascending: false });
+    .order("date", { ascending: true });
 
   if (error) {
     console.error("Error obteniendo los datos", error);
