@@ -104,7 +104,7 @@ const NewCalendar = ({ tournaments }: { tournaments: any }) => {
               {pageTitle.toUpperCase()}
             </h1>
             <p className="text-lg text-white text-center z-10 font-sans">
-              Este es el calendario recomendado por el club para los próximos
+              Este es el calendario aprobado por el club para los próximos
               eventos
             </p>
           </div>
@@ -127,9 +127,9 @@ const NewCalendar = ({ tournaments }: { tournaments: any }) => {
                   {tournaments.map((tournament: any) => (
                     <div
                       key={tournament.id}
-                      className="flex md:flex-row flex-col p-2 my-2"
+                      className="flex md:flex-row flex-col p-2 my-2 h-40"
                     >
-                      <div className="flex flex-col items-center justify-center">
+                      <div className="flex flex-col w-64 items-start justify-start mr-3 border-r border-gray-500">
                         <div className="flex items-start justify-start text-left">
                           <h3 className="text-s md:text-lg text-slate-700 overflow-hidden max-h-14 overflow-ellipsis max-w-xs">
                             {" "}
@@ -144,13 +144,13 @@ const NewCalendar = ({ tournaments }: { tournaments: any }) => {
                           alt={`Thumbnail image`}
                         />
                       </div>
-                      <div className="flex flex-col justify-center">
+                      <div className="flex flex-col justify-start w-full">
                         <h3 className="text-2xl md:text-43xl font-bold mb-2">
                           {tournament.name}
                         </h3>
-                        <div>
+                        <div className="flex justify-start items-end h-full">
                           <a
-                            className="flex flex-row justify-center items-center w-36 p-2 hover:bg-gray-200 rounded-xl font-sans font-bold cursor-pointer"
+                            className="flex flex-row  w-36 p-2 hover:bg-gray-200 rounded-xl font-sans font-bold cursor-pointer"
                             href={tournament.draw}
                             target="_blank"
                           >
