@@ -1,0 +1,73 @@
+<style>
+  @keyframes moveRight {
+    0% {
+      transform: translateX(-600%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(400%) rotate(360deg);
+    }
+  }
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(600%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-400%) rotate(360deg);
+    }
+  }
+  @keyframes moveLeftD {
+    0% {
+      transform: translateX(600%) rotate(0deg);
+      animation-delay: 1000ms;
+    }
+    100% {
+      transform: translateX(-400%) rotate(360deg);
+    }
+  }
+
+  .container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: moveRight 5s linear infinite; /* Ajusta la duración de la animación según desees */
+    z-index: 3;
+    visibility: hidden;
+  }
+  .container2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: moveLeft 5s linear infinite; /* Ajusta la duración de la animación según desees */
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  .container3 {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    animation: moveLeftD 8s linear infinite; /* Ajusta la duración de la animación según desees */
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  .moving-image {
+    width: 300px; /* Ajusta el tamaño de la imagen según desees */
+    height: auto;
+  }
+</style>
+
+<div class="container">
+  <img
+    src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/volante.webp?t=2024-04-01T14%3A27%3A09.286Z"
+    alt="Imagen en movimiento"
+    class="moving-image"
+  />
+</div>
+<div class="container2">
+  <img
+    src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/volante.webp?t=2024-04-01T14%3A27%3A09.286Z"
+    alt="Imagen en movimiento"
+    class="moving-image"
+  />
+</div>

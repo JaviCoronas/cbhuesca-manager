@@ -1,0 +1,31 @@
+---
+import GlobalLayout from "../../../layouts/GlobalLayout.astro";
+
+const pageTitle = "Liga de Adultos";
+---
+
+<GlobalLayout pageTitle={pageTitle}>
+  <div class="sticky h-screen w-screen bg-[#ffc559]">
+    <div
+      class="flex flex-col justify-center items-center md:top-20 top-[14rem] w-full z-10"
+    >
+      <img
+        class="bg-no-repeat w-[50rem] pt-[6rem] animate-fade animate-once animate-duration-[2000ms]"
+        src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/amigos.webp?t=2024-04-01T14%3A17%3A08.853Z"
+        alt="info"
+      />
+      <p
+        class="text-6xl font-sans font-bold m-3 animate-jump-in animate-fade-right animate-once animate-duration-[2000ms] animate-delay-[1500ms]"
+      >
+        Jueves, 11 de Abril de 18:30 a 20:00
+      </p>
+      <a
+        class="flex text-center items-center justify-center md:w-96 w-60 bg-[#fed786] hover:transparent text-[#744438] font-semibold py-2 px-4 md:m-6 m-6 border-transparent hover:border-[#744438] border-4 rounded md:text-4xl text-2xl"
+        href="https://www.instagram.com/p/C5OHmIuIE2j/"
+        target="_blank"
+      >
+        <p>+ Información</p>
+      </a>
+    </div>
+  </div>
+</GlobalLayout>

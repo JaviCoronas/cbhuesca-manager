@@ -1,0 +1,99 @@
+---
+import GlobalLayout from "../../../../layouts/GlobalLayout.astro";
+
+const pageTitle = "Liga de Adultos";
+---
+
+<GlobalLayout pageTitle={pageTitle}>
+  <div class="md:h-full h-full w-screen bg-[#fef7e8] relative">
+    <div
+      class="md:absolute flex md:bottom-0 md:left-0 bottom-12 object-fill z-0"
+    >
+      <img
+        class="object-cover bg-no-repeat bg-cover animate-fade animate-once animate-duration-[2000ms] z-0"
+        src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/seniorLeague-mu2.png?t=2024-03-28T08%3A42%3A49.401Z"
+        alt="señor"
+      />
+    </div>
+    <div class="flex w-full justify-center items-center text-center">
+      <h2
+        class="md:text-6xl text-4xl font-sans font-extrabold text-[#744438] mb-5 md:pt-10 animate-fade animate-once animate-duration-[2000ms]"
+      >
+        Liga Social de Dobles para Adultos
+      </h2>
+    </div>
+    <div
+      class="flex flex-col items-end justify-center w-full md:pt-10 mt-5 bg-transparent pl-2 pr-2 text-center relative z-10 animate-fade animate-once animate-duration-[2000ms] animate-delay-1000"
+    >
+      <div class="flex flex-col md:w-2/3 w-full justify-center items-center">
+        <p class="font-sans">
+          Os presentamos esta nueva propuesta que queremos poner en marcha y que
+          iremos celebrando hasta el próximo mes de junio. Se trata de
+          establecer un Ranking Social (RS) de dobles para adultos +18 años. No
+          es necesario estar federado, es una Liga Social abierta a todos los
+          amantes del bádminton.
+        </p>
+        <p class="font-sans mt-5">
+          <strong>Modalidades:</strong> El RS se establecerá en 2 modalidades únicas.
+          <strong>Una para DM/DF y otra para DMx </strong>
+        </p>
+        <p class="font-sans mt-5">
+          <strong>Participantes:</strong> Adultos +18 años
+        </p>
+        <p class="font-sans mt-5">
+          <strong>Fechas:</strong> La primera jornada de esta Liga se celebrará el
+          viernes día 12 de abril. Siguientes: 26 abril, 10 mayo, 24 mayo, 7 junio,
+          21 junio. Final y entrega de premios.
+        </p>
+        <p class="font-sans mt-5">
+          <strong>Horario:</strong>A partir de las 18.30h
+        </p>
+        <p class="font-sans mt-5">
+          <strong>Cuota inscripción: </strong>3 euros 1 modalidad y 5 dos
+          modalidades para jugadores del Club y 6 y 10 euros para no miembros
+          del Club.
+        </p>
+        <p class="font-sans mt-5">
+          <strong>Forma de pago: </strong>La cuota de participación se abonará
+          en efectivo antes del comienzo de la competición. Los miembros del
+          club podrán hacerlo por la cuenta habitual si asi lo prefieren.
+        </p>
+        <p class="font-sans mt-5">
+          <strong>Partidos: </strong>Se jugará al mejor de 3 set de 15 puntos
+          (sin alargue). En caso de empate, el tercer set se jugará 11 puntos.
+        </p>
+        <p class="font-sans mt-5">
+          <strong>Volantes: </strong>híbridos (1 por partido) o nailon (a
+          elegir)
+        </p>
+        <p class="font-sans mt-5">
+          <strong>Puntuación: </strong>Por el resultado obtenido se establecerá
+          una puntuación individual a cada miembro de la pareja, estableciéndose
+          una clasificación individual de dobles. Esto permite no perder
+          puntuación en caso de cambiar de pareja.
+        </p>
+        <p class="font-sans mt-5">
+          <strong>6 Premios: </strong>A los 2 jugadores y jugadoras con mejor
+          puntuación en el RS. en DM, DF y DMx
+        </p>
+        <p class="font-sans mt-5">
+          <strong>Forma de juego: </strong>En liguilla por grupos, o cuadros por
+          puestos, según el núm. de pareja participantes.
+        </p>
+        <p class="font-sans mt-5">
+          <strong>Duración: </strong>se intentará que no sobrepase las 2,30
+          horas de competición. De 18,30 a 21 h.
+        </p>
+        <p class="font-sans mt-5">
+          Cualquier duda o consulta: <strong>eventos@badmintonhuesca.es</strong>
+        </p>
+        <a
+          class="flex text-center items-center justify-center md:w-96 w-60 bg-[#fed786] hover:transparent text-[#744438] font-semibold py-2 px-4 md:m-6 m-2 mt-5 border-transparent hover:border-[#744438] border-4 rounded md:text-4xl text-2xl animate-pulse hover:animate-none"
+          href="mailto:eventos@badmintonhuesca.es?subject=Inscripción Liga Adultos"
+        >
+          <p>Inscríbete</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</GlobalLayout>

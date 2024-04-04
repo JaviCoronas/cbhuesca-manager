@@ -1,10 +1,74 @@
 ---
 import GlobalLayout from "../../layouts/GlobalLayout.astro";
-import SeniorLeague from "./seniorLeague.astro";
+import SeniorLeague from "./liga-adultos/index.astro";
+import CbHuescaFriends from "./amigos-badminton/index.astro";
 import SanJorge from "./sanJorge2024.astro";
 const pageTitle = "Eventos";
+
+interface Events {
+  name: string;
+  cartel: string;
+  inscription: string;
+  href: string;
+}
+
+const events: Events[] = [
+  {
+    name: "Amigos bádminton",
+    cartel:
+      "https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/events/eventoAmigos.webp?t=2024-04-04T13%3A49%3A50.193Z",
+    inscription: "",
+    href: "amigos-badminton",
+  },
+  {
+    name: "Liga de Adultos",
+    cartel:
+      "https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/events/eventoLigaAdultos.webp?t=2024-04-04T15%3A11%3A00.700Z",
+    inscription: "",
+    href: "liga-adultos/info",
+  },
+];
 ---
 
 <GlobalLayout pageTitle={pageTitle}>
-  <SeniorLeague />
+  <div class="bg-slate-200">
+    <div
+      class="flex flex-col h-30 items-center justify-center bg-cover bg-center"
+      style="background-image: url('/assets/historyHeader.webp');"
+    >
+      <div class="flex-none">
+        <div class="flex flex-col items-center justify-center h-36 md:h-96">
+          <h1
+            class="text-3xl md:text-5xl lg:text-6xl text-white font-sans font-extrabold text-center mb-4 z-10"
+          >
+            EVENTOS ACTIVOS
+          </h1>
+          <p class="text-lg text-white text-center z-10"></p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-row justify-center items-center font sans mt-12 md:mr-10 md:ml-10 mr-3 ml-3"
+    >
+      <div class="flex flex-wrap md:w-2/3 w-full">
+        {
+          events.map((event) => (
+            <>
+              <a
+                class="relative md:w-80 w-64 h-94 m-5 animate-zoom cursor-pointer shadow-xl rounded-lg hover:scale-105 transition duration-500"
+                href={`/events/${event.href}`}
+              >
+                <img
+                  class="w-full h-full object-cover bg-no-repeat bg-cover z-10 rounded-lg"
+                  src={event.cartel}
+                  alt={`Thumbnail ${event.cartel}`}
+                />
+                <div class="absolute top-2 left-2" />
+              </a>
+            </>
+          ))
+        }
+      </div>
+    </div>
+  </div>
 </GlobalLayout>

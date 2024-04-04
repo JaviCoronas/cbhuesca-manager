@@ -1,0 +1,38 @@
+---
+import GlobalLayout from "../../../layouts/GlobalLayout.astro";
+
+const pageTitle = "Liga de Adultos";
+---
+
+<GlobalLayout pageTitle={pageTitle}>
+  <div class="sticcky h-screen w-screen bg-[#fef7e8]">
+    <div
+      class="flex flex-col items-center justify-center w-full pt-10 bg-[#fef7e8]"
+    >
+      <h2
+        class="md:text-[6rem] text-4xl font-sans font-extrabold text-[#744438] mb-10 animate-fade animate-once animate-duration-[2000ms] mr-2"
+      >
+        LIGA DE ADULTOS
+      </h2>
+      <a
+        class="flex text-center items-center justify-center md:w-96 w-60 bg-[#fed786] hover:transparent text-[#744438] font-semibold py-2 px-4 md:m-6 m-2 mt-20 border-transparent hover:border-[#744438] border-4 rounded md:text-4xl text-2xl"
+        href="mailto:eventos@badmintonhuesca.es?subject=Inscripción Liga social"
+      >
+        <p>Inscribete</p>
+      </a>
+      <a
+        class="flex text-center items-center justify-center md:w-96 w-60 bg-[#fed786] hover:transparent text-[#744438] font-semibold py-2 px-4 md:m-6 m-2 border-transparent hover:border-[#744438] border-4 rounded md:text-4xl text-2xl"
+        href="/events/liga-adultos/info"
+      >
+        <p>+ Información</p>
+      </a>
+    </div>
+    <div class="absolute md:bottom-0 md:left-0 bottom-12 object-fill z-20">
+      <img
+        class="object-cover bg-no-repeat bg-cover animate-fade animate-once animate-duration-[2000ms]"
+        src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/seniorLeague-mu2.png?t=2024-03-28T08%3A42%3A49.401Z"
+        alt="señor"
+      />
+    </div>
+  </div>
+</GlobalLayout>
