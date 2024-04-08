@@ -29,7 +29,9 @@ const { Content } = await entry.render();
           style={{ objectFit: "fill" }}
           class="w-screen pl-1 pr-1"
         />
-        <h1 class="md:text-5xl text-3xl font-extrabold font-sans m-3">
+        <h1
+          class="md:text-5xl text-3xl font-extrabold font-sans m-3 text-center"
+        >
           {entry.data.title}
         </h1>
       </div>
@@ -47,7 +49,6 @@ const { Content } = await entry.render();
     .image {
       display: flex;
       justify-content: center;
-      margin: 3rem;
     }
   </style>
 </GlobalLayout>
