@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import GlobalLayout from "../../layouts/GlobalLayout.astro";
 import CbhButton from "../../components/cbhbutton/CbhButton.astro";
+import Prose from "./Prose.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("posts");
@@ -32,8 +33,10 @@ const { Content } = await entry.render();
           {entry.data.title}
         </h1>
       </div>
-      <div class="m-3 text-center md:text-justify">
-        <Content class="article" />
+      <div class="m-3 text-center md:text-justify w-full">
+        <Prose>
+          <Content class="article" />
+        </Prose>
       </div>
       <div class="flex justify-end m-5">
         <CbhButton title="Atrás" href={"/news"} />
@@ -41,24 +44,6 @@ const { Content } = await entry.render();
     </main>
   </div>
   <style is:inline>
-    h2 {
-      font-family: "Montserrat", sans-serif;
-      font-size: x-large;
-      font-weight: bold;
-      color: black;
-      margin-top: 10px;
-    }
-    p {
-      margin-top: 10px;
-      font-family: "Montserrat", sans-serif;
-      font-size: large;
-    }
-    ul {
-      margin: 10px;
-    }
-    a {
-      color: blue;
-    }
     .image {
       display: flex;
       justify-content: center;
