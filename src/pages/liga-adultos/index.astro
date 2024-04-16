@@ -1,0 +1,29 @@
+---
+import GlobalLayout from "../../layouts/GlobalLayout.astro";
+import Ranking from "./components/Ranking.astro";
+
+const pageTitle = "Liga Adultos";
+---
+
+<GlobalLayout pageTitle={pageTitle}>
+  <div class="bg-slate-200">
+    <div
+      class="flex flex-col h-30 items-center justify-center bg-no-repeat bg-left bg-contain"
+      style="background-image: url('https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/seniorLeague-mu2.png');"
+    >
+      <div class="flex-none">
+        <div class="flex flex-col items-center justify-center h-36 md:h-96">
+          <h1
+            class="text-5xl md:text-5xl lg:text-6xl text-black font-sans font-extrabold text-center mb-4 z-10"
+          >
+            {pageTitle.toUpperCase()}
+          </h1>
+          <p class="text-lg text-white text-center z-10 font-sans"></p>
+        </div>
+      </div>
+    </div>
+    <div class="font-sans mt-2 md:mr-28 md:ml-28 mr-3 ml-3">
+      <Ranking />
+    </div>
+  </div>
+</GlobalLayout>

@@ -1,0 +1,267 @@
+---
+import { collections } from "../../../content/config";
+import Rank from "./Rank.astro";
+
+const rankingDMDF = [
+  {
+    rank: "1",
+    name: "Carlos Varea",
+    points: "550",
+    colour: "#4361ee",
+  },
+  {
+    rank: "1",
+    name: "Jose Carlos Ferrer",
+    points: "550",
+    colour: "#4361ee",
+  },
+  {
+    rank: "3",
+    name: "Alberto Rodriguez",
+    points: "468",
+    colour: "#4361ee",
+  },
+  {
+    rank: "3",
+    name: "Alfredo Machín",
+    points: "468",
+    colour: "#4361ee",
+  },
+  {
+    rank: "5",
+    name: "Juan Luis Bueno",
+    points: "385",
+    colour: "#4361ee",
+  },
+  {
+    rank: "5",
+    name: "Roberto Serrano",
+    points: "385",
+    colour: "#4361ee",
+  },
+  {
+    rank: "5",
+    name: "Javier Abizanda",
+    points: "385",
+    colour: "#4361ee",
+  },
+  {
+    rank: "5",
+    name: "Alejandro Peralta",
+    points: "385",
+    colour: "#4361ee",
+  },
+  {
+    rank: "9",
+    name: "Arturo Bestué",
+    points: "303",
+    colour: "#4361ee",
+  },
+  {
+    rank: "9",
+    name: "Lorenzo Lairla",
+    points: "303",
+    colour: "#4361ee",
+  },
+  {
+    rank: "9",
+    name: "Enrique Gállego",
+    points: "303",
+    colour: "#4361ee",
+  },
+  {
+    rank: "9",
+    name: "Ricardo Constante",
+    points: "303",
+    colour: "#4361ee",
+  },
+  {
+    rank: "1",
+    name: "Aitana Díaz",
+    points: "303",
+    colour: "#7209b7",
+  },
+  {
+    rank: "1",
+    name: "Paula Castro",
+    points: "303",
+    colour: "#7209b7",
+  },
+  {
+    rank: "9",
+    name: "Eduardo Solano",
+    points: "303",
+    colour: "#4361ee",
+  },
+  {
+    rank: "9",
+    name: "Francisco Gimenez",
+    points: "303",
+    colour: "#4361ee",
+  },
+  {
+    rank: "15",
+    name: "Gregorio Infante",
+    points: "211",
+    colour: "#4361ee",
+  },
+  {
+    rank: "15",
+    name: "Juanjose Fondevila",
+    points: "211",
+    colour: "#4361ee",
+  },
+  {
+    rank: "15",
+    name: "Javier blanco",
+    points: "211",
+    colour: "#4361ee",
+  },
+  {
+    rank: "15",
+    name: "Rubén Ferrer",
+    points: "211",
+    colour: "#4361ee",
+  },
+  {
+    rank: "3",
+    name: "Lucía Olivar",
+    points: "211",
+    colour: "#7209b7",
+  },
+  {
+    rank: "3",
+    name: "Mapi Gratal",
+    points: "211",
+    colour: "#7209b7",
+  },
+  {
+    rank: "15",
+    name: "Alberto Boné",
+    points: "211",
+    colour: "#4361ee",
+  },
+  {
+    rank: "15",
+    name: "Javier Conde",
+    points: "211",
+    colour: "#4361ee",
+  },
+];
+
+const rankingDMx = [
+  {
+    rank: "1",
+    name: "Aitana Díaz",
+    points: "408",
+    colour: "#3a0ca3",
+  },
+  {
+    rank: "1",
+    name: "Alfredo Machín",
+    points: "408",
+    colour: "#3a0ca3",
+  },
+  {
+    rank: "3",
+    name: "Paula Castro",
+    points: "340",
+    colour: "#3a0ca3",
+  },
+  {
+    rank: "3",
+    name: "Carlos Varea",
+    points: "340",
+    colour: "#3a0ca3",
+  },
+  {
+    rank: "5",
+    name: "Mapi Gratal",
+    points: "280",
+    colour: "#3a0ca3",
+  },
+  {
+    rank: "5",
+    name: "Alberto Rodríguez",
+    points: "280",
+    colour: "#3a0ca3",
+  },
+  {
+    rank: "5",
+    name: "Lucía Olivar",
+    points: "280",
+    colour: "#3a0ca3",
+  },
+  {
+    rank: "5",
+    name: "Roerto Serrano",
+    points: "280",
+    colour: "#3a0ca3",
+  },
+];
+---
+
+<div class="flex md:flex-row flex-col">
+  <div class="flex flex-col md:w-1/2 w-full mt-5 md:mt-0">
+    <p class="text-3xl font-sans">
+      Ranking<strong class="text-5xl"> DM/DF</strong>
+    </p>
+    <table
+      class="w-full font-sans border-spacing-2 border-separate animate-fade animate-once animate-duration-[2000ms]"
+    >
+      <thead
+        class="bg-slate-200 rounded-xl font-sans text-lg"
+        style="height: 50px"
+      >
+        <tr class="w-full">
+          <th class="rounded-xl md:w-12 w-6">Posición</th>
+          <th class="md:p-2 p-0 rounded-xl md:w-64 w-full">Jugador</th>
+          <th class="md:p-2 p-0 rounded-xl md:w-12 w-6">Puntos</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rankingDMDF.map((element, index) => (
+            <Rank
+              pos={element.rank}
+              name={element.name}
+              points={element.points}
+              colour={element.colour}
+            />
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+  <div class="flex flex-col md:w-1/2 w-full mt-5 md:mt-0">
+    <p class="text-3xl font-sans">
+      Ranking<strong class="text-5xl"> DMx</strong>
+    </p>
+    <table
+      class="w-full font-sans border-spacing-2 border-separate animate-fade animate-once animate-duration-[2000ms] animate-delay-500"
+    >
+      <thead
+        class="bg-slate-200 rounded-xl font-sans text-lg w-full"
+        style="height: 50px"
+      >
+        <tr class="w-full">
+          <th class="rounded-xl md:w-12 w-6">Posición</th>
+          <th class="md:p-2 p-0 rounded-xl md:w-64 w-full">Jugador</th>
+          <th class="md:p-2 p-0 rounded-xl md:w-12 w-6">Puntos</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rankingDMx.map((element, index) => (
+            <Rank
+              pos={element.rank}
+              name={element.name}
+              points={element.points}
+              colour={element.colour}
+            />
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -5,7 +5,7 @@ const pageTitle = "Horario";
 ---
 
 <GlobalLayout pageTitle={pageTitle}>
-  <di class="flex flex-col w-full justify-center items-center">
+  <div class="flex flex-col w-full justify-center items-center">
     <div
       class="flex flex-col h-30 items-center justify-center bg-cover bg-center w-full"
       style="background-image: url('/assets/aboutHeader.webp');"
@@ -395,118 +395,118 @@ const pageTitle = "Horario";
         </tbody>
       </table>
     </div>
-  </di>
-  <div class="md:hidden flex flex-col justify-center items-center w-full">
-    <div
-      class="flex flex-col w-[95%] h-92 m-2 text-center items-start rounded-xl"
-    >
-      <div class="text-2xl bg-slate-300 w-full rounded-xl">
-        <p>Lunes-Jueves</p>
-      </div>
-      <div class="text-l bg-slate-300 w-full rounded-xl mt-1"></div>
+    <div class="md:hidden flex flex-col justify-center items-center w-full">
       <div
-        class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
+        class="flex flex-col w-[95%] h-92 m-2 text-center items-start rounded-xl"
       >
-        <small>08:00 - 10:00</small>
-        Escuela de Tecnificación
+        <div class="text-2xl bg-slate-300 w-full rounded-xl">
+          <p>Lunes-Jueves</p>
+        </div>
+        <div class="text-l bg-slate-300 w-full rounded-xl mt-1"></div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>08:00 - 10:00</small>
+          Escuela de Tecnificación
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m w-full rounded-xl mt-2 h-12 text-white"
+          style={{ backgroundColor: "#f72585" }}
+        >
+          <small>16:30 - 17:30</small>
+          Iniciación colegios I
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>16:30 - 18:00</small>
+          Tecnificación infantil
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m w-full rounded-xl mt-2 h-12 text-white"
+          style={{ backgroundColor: "#f72585" }}
+        >
+          <small>17:30 - 18:30</small>
+          Iniciación colegios II
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>18:00 - 20:00</small>
+          Tecnificación jóvenes
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#4361ee] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>18:30 - 20:00</small>
+          Grupo Institutos
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#3a0ca3] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>20:00 - 22:00</small>
+          Alta competición
+        </div>
       </div>
       <div
-        class="flex flex-col justify-center items-center text-m w-full rounded-xl mt-2 h-12 text-white"
-        style={{ backgroundColor: "#f72585" }}
+        class="flex flex-col w-[95%] h-72 m-2 text-center items-start rounded-xl"
       >
-        <small>16:30 - 17:30</small>
-        Iniciación colegios I
+        <div class="text-2xl bg-slate-300 w-full rounded-xl">
+          <p>Viernes</p>
+        </div>
+        <div class="text-l bg-slate-300 w-full rounded-xl mt-1"></div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>08:00 - 10:00</small>
+          Escuela de Tecnificación
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>16:30 - 18:00</small>
+          Tecnificación infantil
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m w-full rounded-xl mt-2 h-12 text-white"
+          style={{ backgroundColor: "#f72585" }}
+        >
+          <small>17:30 - 18:30</small>
+          Iniciación colegios I/II
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>18:00 - 20:00</small>
+          Tecnificación jóvenes
+        </div>
+        <div
+          class="flex flex-col justify-center items-center text-m bg-[#3a0ca3] w-full rounded-xl mt-2 h-12 text-white"
+        >
+          <small>18:30 - 20:00</small>
+          Alta competición
+        </div>
       </div>
       <div
-        class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
+        class="flex flex-col w-[95%] h-36 m-2 text-center items-start rounded-xl"
       >
-        <small>16:30 - 18:00</small>
-        Tecnificación infantil
+        <div class="text-2xl bg-slate-300 w-full rounded-xl mt-2">
+          <p>Sábado - Domingo</p>
+        </div>
+        <div class="text-l bg-slate-300 w-full rounded-xl mt-1"></div>
+        <div
+          class="flex flex-col justify-center items-center text-m w-full rounded-xl mt-2 h-12 text-white"
+          style={{ backgroundColor: "#4cc9f0" }}
+        >
+          <small>Todo el día</small>
+          Libre
+        </div>
       </div>
-      <div
-        class="flex flex-col justify-center items-center text-m w-full rounded-xl mt-2 h-12 text-white"
-        style={{ backgroundColor: "#f72585" }}
-      >
-        <small>17:30 - 18:30</small>
-        Iniciación colegios II
-      </div>
-      <div
-        class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
-      >
-        <small>18:00 - 20:00</small>
-        Tecnificación jóvenes
-      </div>
-      <div
-        class="flex flex-col justify-center items-center text-m bg-[#4361ee] w-full rounded-xl mt-2 h-12 text-white"
-      >
-        <small>18:30 - 20:00</small>
-        Grupo Institutos
-      </div>
-      <div
-        class="flex flex-col justify-center items-center text-m bg-[#3a0ca3] w-full rounded-xl mt-2 h-12 text-white"
-      >
-        <small>20:00 - 22:00</small>
-        Alta competición
-      </div>
+      <p class="text-center">
+        Recuerda que en cualquiera de nuestros horarios hay pistas libres,
+        llámanos o contacta con nosotros mediante el formulario para alquilar
+        alguna de ellas!
+      </p>
     </div>
-    <div
-      class="flex flex-col w-[95%] h-72 m-2 text-center items-start rounded-xl"
-    >
-      <div class="text-2xl bg-slate-300 w-full rounded-xl">
-        <p>Viernes</p>
-      </div>
-      <div class="text-l bg-slate-300 w-full rounded-xl mt-1"></div>
-      <div
-        class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
-      >
-        <small>08:00 - 10:00</small>
-        Escuela de Tecnificación
-      </div>
-      <div
-        class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
-      >
-        <small>16:30 - 18:00</small>
-        Tecnificación infantil
-      </div>
-      <div
-        class="flex flex-col justify-center items-center text-m w-full rounded-xl mt-2 h-12 text-white"
-        style={{ backgroundColor: "#f72585" }}
-      >
-        <small>17:30 - 18:30</small>
-        Iniciación colegios I/II
-      </div>
-      <div
-        class="flex flex-col justify-center items-center text-m bg-[#7209b7] w-full rounded-xl mt-2 h-12 text-white"
-      >
-        <small>18:00 - 20:00</small>
-        Tecnificación jóvenes
-      </div>
-      <div
-        class="flex flex-col justify-center items-center text-m bg-[#3a0ca3] w-full rounded-xl mt-2 h-12 text-white"
-      >
-        <small>18:30 - 20:00</small>
-        Alta competición
-      </div>
-    </div>
-    <div
-      class="flex flex-col w-[95%] h-36 m-2 text-center items-start rounded-xl"
-    >
-      <div class="text-2xl bg-slate-300 w-full rounded-xl mt-2">
-        <p>Sábado - Domingo</p>
-      </div>
-      <div class="text-l bg-slate-300 w-full rounded-xl mt-1"></div>
-      <div
-        class="flex flex-col justify-center items-center text-m w-full rounded-xl mt-2 h-12 text-white"
-        style={{ backgroundColor: "#4cc9f0" }}
-      >
-        <small>Todo el día</small>
-        Libre
-      </div>
-    </div>
-    <p class="text-center">
-      Recuerda que en cualquiera de nuestros horarios hay pistas libres,
-      llámanos o contacta con nosotros mediante el formulario para alquilar
-      alguna de ellas!
-    </p>
   </div>
 </GlobalLayout>

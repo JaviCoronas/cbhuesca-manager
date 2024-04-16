@@ -1,0 +1,24 @@
+---
+const { pos, name, points, colour } = Astro.props;
+---
+
+<tr class="text-center h-12">
+  <td
+    class="rounded-xl font-bold"
+    style={{ backgroundColor: "#e2e8ef", margin: "2rem" }}
+  >
+    {pos}</td
+  >
+  <td
+    class="rounded-xl text-white"
+    style={{ backgroundColor: colour, margin: "2rem" }}
+  >
+    {name}</td
+  >
+  <td
+    class="rounded-xl font-bold"
+    style={{ backgroundColor: "#e2e8ef", margin: "2rem" }}
+  >
+    {points}</td
+  >
+</tr>
