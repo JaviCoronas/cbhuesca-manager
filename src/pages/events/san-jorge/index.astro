@@ -5,11 +5,21 @@ const pageTitle = "Liga de Adultos";
 ---
 
 <GlobalLayout pageTitle={pageTitle}>
-  <div class="flex h-full bottom-0 left-0 z-0">
-    <img
-      class="h-auto"
-      src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/CARTEL-SAN-JORGE-2024.webp?t=2024-04-16T08%3A59%3A25.726Z"
-      alt="señor"
-    />
+  <div class="flex flex-col justify-center items-center bg-[#60c3aa]">
+    <div class="flex md:w-1/2 w-full">
+      <img
+        class="bg-[#60c3aa]"
+        src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/CARTEL-SAN-JORGE-2024.webp?t=2024-04-16T08%3A59%3A25.726Z"
+        alt="señor"
+      />
+    </div>
+    <div class="flex justify-center items-center bg-[#60c3aa]">
+      <a
+        class="flex text-center items-center justify-center md:w-96 w-60 bg-[#fdd74f] hover:transparent text-[#black] font-semibold py-2 px-4 md:m-6 m-2 mt-5 border-transparent hover:border-black border-4 rounded md:text-4xl text-2xl animate-pulse hover:animate-none"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSd-CkmBkNW_lok4X1CveCaP_lBxDBBvMd0gBzhXaUxwE6dpbg/viewform"
+      >
+        <p>Inscríbete</p>
+      </a>
+    </div>
   </div>
 </GlobalLayout>
