@@ -4,8 +4,8 @@ import CardArchivement from "./CardArchivement";
 const Archivements: React.FC = () => {
   const cardData = [
     {
-      title: "Socios",
-      text: "Todos somos parte de la familia",
+      title: "Usuarios",
+      text: "Todos formamos parte de la familia",
       colour: "#7209b7",
       icon: "/assets/icons/community.svg",
       number: 158,
