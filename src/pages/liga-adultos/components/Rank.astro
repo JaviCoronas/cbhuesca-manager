@@ -1,5 +1,5 @@
 ---
-const { pos, name, points, colour } = Astro.props;
+const { pos, name, tournaments, points, colour } = Astro.props;
 ---
 
 <tr class="text-center h-12">
@@ -14,6 +14,12 @@ const { pos, name, points, colour } = Astro.props;
     style={{ backgroundColor: colour, margin: "2rem" }}
   >
     {name}</td
+  >
+  <td
+    class="rounded-xl font-bold"
+    style={{ backgroundColor: "#e2e8ef", margin: "2rem" }}
+  >
+    {tournaments}</td
   >
   <td
     class="rounded-xl font-bold"
