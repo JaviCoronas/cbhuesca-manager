@@ -7,11 +7,13 @@ import LastNews from "../components/lastNews/LastNews.astro";
 import Archivements from "../components/archivements/Archievements";
 import "../styles/global.css";
 import ChampionsLanding from "../components/speciallanding/ChampionsLanding.astro";
+import Campus from "../components/speciallanding/Campus.astro";
 
 const pageTitle = "Club Bádminton Huesca";
 ---
 
 <GlobalLayout pageTitle={pageTitle}>
+  <Campus />
   <div
     class="flex flex-col bg-cover bg-center h-screen"
     style="background-image: url('/assets/homeBackground.webp');"
