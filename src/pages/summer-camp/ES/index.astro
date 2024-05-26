@@ -1,0 +1,724 @@
+---
+import GlobalLayout from "../../../layouts/GlobalLayout.astro";
+
+const pageTitle = "Summer Camp";
+---
+
+<GlobalLayout pageTitle={pageTitle}>
+  <nav class="flex flex-row justify-end mr-2 md:mr-[3rem]">
+    <a
+      href="/summer-camp/ES"
+      title="españa iconos"
+      class="flex justify-center items-center m-2"
+      ><img
+        style={{ height: "32px" }}
+        src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/campus/espana.png?t=2024-05-26T20%3A08%3A13.030Z"
+      /></a
+    >
+    <a
+      href="/summer-camp/EN"
+      title="españa iconos"
+      class="flex justify-center items-center"
+      ><img
+        style={{ height: "32px" }}
+        src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/campus/eng.png?t=2024-05-26T20%3A16%3A00.375Z"
+      /></a
+    >
+  </nav>
+  <div
+    class="flex flex-col h-30 items-end justify-center bg-cover bg-center"
+    style="background-image: url('https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/alexCampus2.jpeg?t=2024-05-26T07%3A58%3A16.355Z');"
+  >
+    <div class="flex-none md:w-2/3 w-full md:m-5 m-2">
+      <div class="flex flex-col items-end justify-end h-36 md:h-96">
+        <h1
+          class="text-xl md:text-5xl lg:text-6xl text-white font-sans font-extrabold text-center z-10 animate-once animate-duration-[2000ms] animate-delay-1000"
+        >
+          I CAMPUS INTERNACIONAL
+        </h1>
+        <h1
+          class="text-xl md:text-5xl lg:text-6xl text-white font-sans font-extrabold text-center z-10 animate-once animate-duration-[2000ms] animate-delay-1000"
+        >
+          BADMINTON HUESCA
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div
+    class="flex flex-col md:h-96 h-full w-full p-2 md:pt-10 pt-0 text-center items-center justify-center div-p text-black bg-slate-200"
+  >
+    <p class="w-full md:w-2/3 font-sans text-md md:text-lg">
+      Siempre en la búsqueda de nuevos retos Badminton Huesca lanza este Campus
+      internacional de verano para deportistas con ambición y ganas de seguir
+      creciendo en nuestro deporte. Aprovechando la experiencia profesional de
+      nuestro actual técnico <strong>Roberto Mollinedo</strong> queremos poner en
+      marcha este proyecto y reunir un buen grupo de deportistas con muchas ganas
+      y ambición deportiva para trabajar duro aprovechando al máximo estos días de
+      verano más vacíos de competiciones y eventos. Pretendemos concentrar en este
+      Campus a entusiastas deportistas de diferentes Clubs españoles y europeos,
+      enriqueciendo asi el trabajo, la convivencia y la experiencia para todos los
+      participantes. Quien quiera participar en este Campus solo necesita venir con
+      una gran dosis de ganas e ilusión por aprender, trabajar y poner su máximo
+      esfuerzo en la pista cada día para entre todos poner este Campus en lo más
+      alto de la satisfacción personal alcanzada
+    </p>
+  </div>
+  <div class="flex flex-col w-full items-start justify-center m-2">
+    <h2 class="font-sans text-3xl md:text-4xl mb-2 mt-3">
+      <strong class="text-4xl md:text-5xl font-sans">FECHAS</strong> Disponibles
+    </h2>
+    <ul class="p-2 font-sans">
+      <li>1ª semana: 14 al 21 de julio</li>
+      <li>2ª semana: 21 al 28 de julio</li>
+      <li>3ª semana: 28 al 4 de agosto</li>
+    </ul>
+  </div>
+
+  <div class="flex flex-col w-full">
+    <div class="flex items-start justify-start md:ml-[15rem] ml-0">
+      <h2 class="font-sans text-3xl md:text-4xl mb-2 mt-3 ml-2">
+        <strong class="text-4xl md:text-5xl font-sans">NUESTRAS</strong> Instalaciones
+      </h2>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+      <img
+        src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/sj30.jpeg?t=2024-05-26T08%3A24%3A49.084Z"
+        alt="Instalaciones del club"
+        class="w-view md:w-1/2 h-92 object-cover p-1"
+      />
+      <p
+        class="flex w-full md:w-2/3 font-sans text-md md:text-lg text-center items-center justify-center"
+      >
+        Sede del club Bádminton Huesca: un amplio espacio de 1.200 m2 con 8
+        pistas y tapices que aseguran la más alta calidad de entrenamiento para
+        el desarrollo del Campus
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col w-full">
+    <div class="flex items-start justify-start md:ml-[15rem] ml-0">
+      <h2 class="font-sans text-3xl md:text-4xl mb-2 mt-3 ml-2">
+        <strong class="text-4xl md:text-5xl font-sans">ALOJAMIENTO</strong> Acomodado
+      </h2>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+      <img
+        src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/campus/residencia.jpeg?t=2024-05-26T08%3A50%3A14.421Z"
+        alt="Alojamiento Santo Domingo"
+        class="w-view md:w-1/2 h-92 object-cover p-1"
+      />
+      <p
+        class="flex w-full md:w-2/3 font-sans text-md md:text-lg text-center items-center justify-center"
+      >
+        Ofrecemos la comodidad de estar alojado en la Residencia de estudiantes
+        Sto. Domingo a 15 min andando del Club, con pensión completa desayuno,
+        comida y cena.
+      </p>
+      <div class="flex flex-col items-start justify-start md:ml-[15rem] ml-0">
+        <div class="flex md:flex-row flex-col h-full flex-wrap mt-10">
+          <div class="flex flex-col items-center justify-center m-2 w-64">
+            <svg
+              width="64px"
+              height="64px"
+              viewBox="-2.4 -2.4 28.80 28.80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"
+                ><rect
+                  x="-2.4"
+                  y="-2.4"
+                  width="28.80"
+                  height="28.80"
+                  rx="14.4"
+                  fill="#000000"></rect></g
+              ><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3 4C3 3.44772 2.55228 3 2 3C1.44772 3 1 3.44772 1 4V14V17V20C1 20.5523 1.44772 21 2 21C2.55228 21 3 20.5523 3 20V18H21V20C21 20.5523 21.4477 21 22 21C22.5523 21 23 20.5523 23 20V17V14V11C23 8.23858 20.7614 6 18 6H12C11.4477 6 11 6.44772 11 7V9.5C11 7.567 9.433 6 7.5 6C5.567 6 4 7.567 4 9.5C4 11.433 5.567 13 7.5 13H3V4ZM7.5 13C9.433 13 11 11.433 11 9.5V13H7.5ZM21 15V16H3V15H12H21ZM21 11V13H13V8H18C19.6569 8 21 9.34315 21 11ZM6 9.5C6 8.67157 6.67157 8 7.5 8C8.32843 8 9 8.67157 9 9.5C9 10.3284 8.32843 11 7.5 11C6.67157 11 6 10.3284 6 9.5Z"
+                  fill="#ffffff"></path>
+              </g></svg
+            >
+            <p class="font-sans text-md md:text-lg">Camas Individuales*</p>
+          </div>
+          <div class="flex flex-col items-center justify-center m-2 w-64">
+            <svg
+              fill="#ffffff"
+              width="64px"
+              height="64px"
+              viewBox="-30.72 -30.72 184.32 184.32"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              style="enable-background:new 0 0 122.88 115.21"
+              xml:space="preserve"
+              stroke="#ffffff"
+              ><g
+                id="SVGRepo_bgCarrier"
+                stroke-width="0"
+                transform="translate(0,0), scale(1)"
+                ><rect
+                  x="-30.72"
+                  y="-30.72"
+                  width="184.32"
+                  height="184.32"
+                  rx="92.16"
+                  fill="#000000"></rect></g
+              ><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#CCCCCC"
+                stroke-width="0.24575999999999998"></g><g
+                id="SVGRepo_iconCarrier"
+              >
+                <g>
+                  <path
+                    d="M29.03,100.46l20.79-25.21l9.51,12.13L41,110.69C33.98,119.61,20.99,110.21,29.03,100.46L29.03,100.46z M53.31,43.05 c1.98-6.46,1.07-11.98-6.37-20.18L28.76,1c-2.58-3.03-8.66,1.42-6.12,5.09L37.18,24c2.75,3.34-2.36,7.76-5.2,4.32L16.94,9.8 c-2.8-3.21-8.59,1.03-5.66,4.7c4.24,5.1,10.8,13.43,15.04,18.53c2.94,2.99-1.53,7.42-4.43,3.69L6.96,18.32 c-2.19-2.38-5.77-0.9-6.72,1.88c-1.02,2.97,1.49,5.14,3.2,7.34L20.1,49.06c5.17,5.99,10.95,9.54,17.67,7.53 c1.03-0.31,2.29-0.94,3.64-1.77l44.76,57.78c2.41,3.11,7.06,3.44,10.08,0.93l0.69-0.57c3.4-2.83,3.95-8,1.04-11.34L50.58,47.16 C51.96,45.62,52.97,44.16,53.31,43.05L53.31,43.05z M65.98,55.65l7.37-8.94C63.87,23.21,99-8.11,116.03,6.29 C136.72,23.8,105.97,66,84.36,55.57l-8.73,11.09L65.98,55.65L65.98,55.65z"
+                  ></path>
+                </g>
+              </g></svg
+            >
+            <p class="font-sans text-md md:text-lg">Pensión Completa</p>
+          </div>
+
+          <div class="flex flex-col items-center justify-center m-2 w-64">
+            <svg
+              width="64px"
+              height="64px"
+              viewBox="-6.4 -6.4 76.80 76.80"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#000000"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"
+                ><rect
+                  x="-6.4"
+                  y="-6.4"
+                  width="76.80"
+                  height="76.80"
+                  rx="38.4"
+                  fill="#000000"></rect></g
+              ><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                <g id="a"></g>
+                <g id="b"></g>
+                <g id="c"></g>
+                <g id="d"></g>
+                <g id="e"></g>
+                <g id="f"></g>
+                <g id="g"></g>
+                <g id="h"></g>
+                <g id="i"></g>
+                <g id="j"></g>
+                <g id="k"></g>
+                <g id="l"></g>
+                <g id="m"></g>
+                <g id="n"></g>
+                <g id="o"></g>
+                <g id="p"></g>
+                <g id="q"></g>
+                <g id="r"></g>
+                <g id="s"></g>
+                <g id="t"></g>
+                <g id="u"></g>
+                <g id="v"></g>
+                <g id="w"></g>
+                <g id="x"></g>
+                <g id="y"></g>
+                <g id="a`"></g>
+                <g id="aa"></g>
+                <g id="ab"></g>
+                <g id="ac"></g>
+                <g id="ad"></g>
+                <g id="ae"></g>
+                <g id="af"></g>
+                <g id="ag"></g>
+                <g id="ah"></g>
+                <g id="ai">
+                  <path
+                    d="M32.73,21.97l2.11-7.87c.53-1.99,2.57-3.17,4.57-2.64l16.83,4.51c1.99,.53,3.17,2.57,2.64,4.57l-9.32,34.77c-.53,1.99-2.57,3.17-4.57,2.64l-16.83-4.51c-1.34-.36-2.31-1.4-2.64-2.64l7.21-28.82Z"
+                    fill="#e4ecf0"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M34.37,15.85l-1.64,6.12-7.21,28.82c.19,.73,.61,1.38,1.18,1.87l12.76-3.42c1.99-.53,3.17-2.57,2.64-4.56l-7.72-28.83Z"
+                    fill="#d9e3e9"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M45.51,51.85c-.32,1.21-1.56,1.92-2.77,1.6-1.21-.32-1.92-1.57-1.6-2.77,.32-1.21,1.56-1.92,2.77-1.6,1.21,.32,1.92,1.57,1.6,2.77Z"
+                    fill="#7a8594"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M48.02,42.5c.32-1.21-.39-2.45-1.6-2.77-1.21-.32-2.45,.39-2.77,1.6-.32,1.21,.39,2.45,1.6,2.77,1.21,.32,2.45-.39,2.77-1.6Z"
+                    fill="#7a8594"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M49.32,23.06c.64,2.38-.78,4.83-3.16,5.47-2.38,.64-4.83-.78-5.47-3.16-.64-2.38,.78-4.83,3.16-5.47,2.38-.64,4.83,.78,5.47,3.16Z"
+                    fill="#7a8594"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M13.09,7.57H30.52c2.06,0,3.73,1.67,3.73,3.73V47.29c0,2.06-1.67,3.73-3.73,3.73H13.09c-2.06,0-3.73-1.67-3.73-3.73V11.29c0-2.06,1.67-3.73,3.73-3.73Z"
+                    fill="#f0f3f5"
+                    transform="translate(-6.84 6.64) rotate(-15)"></path>
+                  <path
+                    d="M16.18,15.97c.32,1.21-.39,2.45-1.6,2.77-1.21,.32-2.45-.39-2.77-1.6-.32-1.21,.39-2.45,1.6-2.77,1.21-.32,2.45,.39,2.77,1.6Z"
+                    fill="#7a8594"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M26.18,20.46c.32,1.21-.39,2.45-1.6,2.77-1.21,.32-2.45-.39-2.77-1.6-.32-1.21,.39-2.45,1.6-2.77,1.21-.32,2.45,.39,2.77,1.6Z"
+                    fill="#7a8594"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M20.35,35.92c.32,1.21-.39,2.45-1.6,2.77-1.21,.32-2.45-.39-2.77-1.6-.32-1.21,.39-2.45,1.6-2.77,1.21-.32,2.45,.39,2.77,1.6Z"
+                    fill="#7a8594"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M22.86,45.27c-.32-1.21-1.56-1.92-2.77-1.6-1.21,.32-1.92,1.56-1.6,2.77,.32,1.21,1.56,1.92,2.77,1.6,1.21-.32,1.92-1.57,1.6-2.77Z"
+                    fill="#7a8594"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M30.75,33.13c-.32-1.21-1.56-1.92-2.77-1.6-1.21,.32-1.92,1.57-1.6,2.77,.32,1.21,1.56,1.92,2.77,1.6,1.21-.32,1.92-1.57,1.6-2.77Z"
+                    fill="#7a8594"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M33.25,42.48c.32,1.21-.39,2.45-1.6,2.77-1.21,.32-2.45-.39-2.77-1.6-.32-1.21,.39-2.45,1.6-2.77,1.21-.32,2.45,.39,2.77,1.6Z"
+                    fill="#7a8594"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M25.72,5.93c-.37-.01-.74,.02-1.12,.12l-3.24,.87c1.99-.53,4.03,.64,4.57,2.64l9.32,34.77c.53,1.99-.64,4.03-2.64,4.57l3.24-.87c1.99-.53,3.17-2.57,2.64-4.57L29.17,8.69c-.43-1.62-1.86-2.7-3.45-2.76Z"
+                    fill="#e4ecf0"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M53.11,15.14c1.99,.53,3.17,2.57,2.64,4.57l-9.32,34.77c-.53,1.99-2.56,3.17-4.56,2.64l3.11,.83c1.99,.54,4.03-.64,4.57-2.64l9.32-34.77c.53-2-.64-4.03-2.64-4.57l-3.12-.84Z"
+                    fill="#d9e3e9"
+                    fill-rule="evenodd"></path>
+                  <path
+                    d="M13.99,19.81c.29,0,.57-.04,.85-.11,1.74-.47,2.77-2.26,2.31-4h0c-.38-1.42-1.68-2.42-3.15-2.42-.29,0-.57,.04-.85,.11-1.74,.47-2.77,2.26-2.31,4,.38,1.42,1.68,2.42,3.15,2.42Zm-.33-4.48c.11-.03,.22-.04,.33-.04,.57,0,1.07,.39,1.22,.94,.18,.66-.23,1.37-.89,1.55-.66,.18-1.37-.24-1.55-.89-.18-.66,.23-1.37,.89-1.55Z"
+                  ></path>
+                  <path
+                    d="M23.99,24.31c.29,0,.57-.04,.84-.11,.84-.22,1.54-.76,1.98-1.52,.44-.76,.55-1.64,.33-2.47-.45-1.7-2.27-2.76-4-2.31-1.42,.38-2.42,1.68-2.42,3.15,0,.29,.04,.57,.11,.84,.38,1.42,1.68,2.42,3.15,2.42Zm-.33-4.48c.11-.03,.22-.04,.33-.04,.57,0,1.07,.39,1.22,.94h0c.09,.32,.04,.66-.13,.96-.17,.29-.44,.5-.76,.59-.65,.17-1.37-.24-1.55-.89-.03-.11-.04-.22-.04-.33,0-.57,.39-1.07,.93-1.22Z"
+                  ></path>
+                  <path
+                    d="M19.01,39.66c.84-.22,1.54-.76,1.98-1.52,.44-.76,.55-1.64,.33-2.47-.45-1.7-2.28-2.77-4-2.31-1.42,.38-2.42,1.68-2.42,3.15,0,.29,.04,.57,.11,.84,.39,1.46,1.71,2.42,3.15,2.42,.28,0,.56-.04,.84-.11Zm-2.06-2.83c-.03-.11-.04-.22-.04-.33,0-.57,.39-1.07,.93-1.22,.11-.03,.22-.04,.33-.04,.57,0,1.07,.39,1.22,.94,.09,.32,.04,.66-.13,.96-.17,.29-.44,.5-.76,.59-.66,.18-1.37-.23-1.55-.89Z"
+                  ></path>
+                  <path
+                    d="M30.22,39.92c-1.42,.38-2.42,1.68-2.42,3.15,0,.28,.04,.57,.11,.84,.38,1.42,1.68,2.42,3.15,2.42,.29,0,.57-.04,.85-.11,1.74-.47,2.77-2.26,2.31-4-.45-1.7-2.28-2.76-4-2.31Zm1.17,4.37c-.65,.17-1.37-.24-1.55-.89-.03-.11-.04-.22-.04-.33,0-.57,.39-1.07,.93-1.22,.11-.03,.22-.04,.33-.04,.57,0,1.07,.38,1.22,.94,.18,.66-.23,1.37-.89,1.55Z"
+                  ></path>
+                  <path
+                    d="M22.3,43.03c-.76-.44-1.64-.56-2.47-.33-.84,.22-1.54,.76-1.98,1.52-.44,.76-.55,1.64-.33,2.47,.38,1.42,1.68,2.42,3.15,2.42,.28,0,.57-.04,.85-.11,1.42-.38,2.42-1.68,2.42-3.15,0-.29-.04-.57-.11-.85-.22-.84-.77-1.54-1.52-1.98Zm-1.3,4.04c-.68,.18-1.37-.24-1.55-.89-.09-.32-.04-.66,.13-.96,.17-.29,.44-.5,.76-.59,.11-.03,.21-.04,.32-.04,.22,0,.44,.06,.63,.17,.29,.17,.5,.44,.59,.76h0c.03,.11,.04,.22,.04,.33,0,.57-.39,1.07-.93,1.22Z"
+                  ></path>
+                  <path
+                    d="M29.41,36.87c1.42-.38,2.42-1.68,2.42-3.15,0-.29-.04-.57-.11-.84-.38-1.42-1.68-2.42-3.15-2.42-.29,0-.57,.04-.84,.11-.84,.22-1.54,.76-1.98,1.52-.44,.76-.55,1.64-.33,2.47,.38,1.42,1.68,2.42,3.15,2.42,.28,0,.57-.04,.84-.11Zm-2.07-2.83c-.09-.32-.04-.66,.13-.96,.23-.4,.65-.63,1.09-.63,.57,0,1.07,.39,1.22,.94,.03,.11,.04,.22,.04,.33,0,.57-.39,1.07-.93,1.22-.66,.17-1.37-.24-1.55-.89Z"
+                  ></path>
+                  <path
+                    d="M56.49,15.01l-16.84-4.51c-2.51-.67-5.11,.83-5.79,3.34l-1.14,4.27-2.59-9.68c-.68-2.52-3.27-4.02-5.79-3.34L7.51,9.6c-1.22,.33-2.24,1.11-2.87,2.2s-.8,2.37-.47,3.59L13.48,50.16c.56,2.11,2.48,3.5,4.57,3.5,.4,0,.81-.05,1.22-.16l5.66-1.52c.6,1.17,1.66,2.07,2.96,2.42l16.84,4.51c.41,.11,.82,.16,1.22,.16,2.09,0,4-1.4,4.57-3.5l9.32-34.77c.67-2.52-.82-5.12-3.34-5.79ZM6.36,12.8c.36-.63,.95-1.08,1.66-1.27L24.86,7.02c.24-.06,.47-.09,.71-.09,1.2,0,2.31,.81,2.64,2.02l4.4,16.42-22.1,5.92L6.09,14.87c-.19-.71-.09-1.44,.27-2.07Zm12.39,38.77c-1.46,.39-2.95-.48-3.34-1.93l-4.4-16.42,22.1-5.92,4.4,16.42c.39,1.45-.48,2.95-1.93,3.34l-16.83,4.51Zm29.84,3.49c-.39,1.45-1.88,2.32-3.34,1.93l-16.83-4.51c-.6-.16-1.06-.56-1.42-1.04l9.11-2.44c2.52-.68,4.02-3.27,3.34-5.79l-2.36-8.83,15.91,4.26-4.4,16.42Zm9.32-34.77l-4.4,16.42-17.02-4.56-2.72-10.17,2.04-7.61c.39-1.45,1.89-2.32,3.34-1.93l16.83,4.51c1.45,.39,2.32,1.89,1.93,3.34Z"
+                  ></path>
+                  <path
+                    d="M44.17,48.11c-1.77-.47-3.54,.59-3.99,2.31-.47,1.74,.57,3.53,2.31,4,1.74,.47,3.53-.57,4-2.31,.47-1.74-.57-3.53-2.31-4Zm.38,3.48h0c-.18,.66-.88,1.07-1.55,.89-.67-.18-1.08-.87-.89-1.55,.18-.67,.87-1.07,1.55-.89,.67,.18,1.07,.87,.89,1.55Z"
+                  ></path>
+                  <path
+                    d="M46.67,38.77c-1.77-.47-3.54,.59-3.99,2.31-.46,1.73,.57,3.53,2.31,4,.27,.07,.56,.11,.85,.11,1.47,0,2.77-.99,3.15-2.42,.47-1.74-.57-3.53-2.31-4Zm.38,3.48h0c-.18,.66-.89,1.07-1.55,.89-.67-.18-1.07-.88-.89-1.55,.18-.66,.86-1.07,1.55-.89,.67,.18,1.07,.87,.89,1.55Z"
+                  ></path>
+                  <path
+                    d="M47.73,19.49c-1.27-.73-2.74-.93-4.14-.55-2.91,.78-4.65,3.78-3.87,6.69,.64,2.39,2.81,4.05,5.28,4.05,.48,0,.95-.06,1.42-.19,2.38-.64,4.05-2.81,4.05-5.28,0-.48-.06-.95-.19-1.41-.38-1.4-1.28-2.58-2.55-3.31Zm-1.83,8.07c-.29,.08-.59,.12-.9,.12-1.57,0-2.94-1.06-3.35-2.57-.49-1.85,.61-3.75,2.45-4.24,.91-.24,1.84-.1,2.63,.35,.81,.47,1.38,1.21,1.62,2.1,.08,.29,.12,.59,.12,.9,0,1.57-1.06,2.94-2.57,3.35Z"
+                  ></path>
+                </g>
+                <g id="aj"></g>
+                <g id="ak"></g>
+                <g id="al"></g>
+                <g id="am"></g>
+                <g id="an"></g>
+                <g id="ao"></g>
+                <g id="ap"></g>
+                <g id="aq"></g>
+                <g id="ar"></g>
+                <g id="as"></g>
+                <g id="at"></g>
+                <g id="au"></g>
+                <g id="av"></g>
+                <g id="aw"></g>
+                <g id="ax"></g>
+              </g></svg
+            >
+            <p class="font-sans text-md md:text-lg">Zonas Comunes</p>
+          </div>
+
+          <div class="flex flex-col items-center justify-center m-2 w-64">
+            <svg
+              width="64px"
+              height="64px"
+              viewBox="-5.04 -5.04 34.08 34.08"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#ffffff"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"
+                ><rect
+                  x="-5.04"
+                  y="-5.04"
+                  width="34.08"
+                  height="34.08"
+                  rx="17.04"
+                  fill="#000000"></rect></g
+              ><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                <path
+                  d="M20.25 0.75H3.75C2.92157 0.75 2.25 1.42157 2.25 2.25V21.75C2.25 22.5784 2.92157 23.25 3.75 23.25H20.25C21.0784 23.25 21.75 22.5784 21.75 21.75V2.25C21.75 1.42157 21.0784 0.75 20.25 0.75Z"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M5.25 3.75H8.25"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M19 3.20001V4.20001"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M16 3.20001V4.20001"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M2.25 6.75H21.75"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M12 20.25C14.8995 20.25 17.25 17.8995 17.25 15C17.25 12.1005 14.8995 9.75 12 9.75C9.10051 9.75 6.75 12.1005 6.75 15C6.75 17.8995 9.10051 20.25 12 20.25Z"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M9.75 15C9.75 14.4033 9.98705 13.831 10.409 13.409C10.818 13 11.3683 12.7647 11.9451 12.7507"
+                  stroke="#ffffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </g></svg
+            >
+            <p class="font-sans text-md md:text-lg">Lavandería</p>
+          </div>
+
+          <div class="flex flex-col items-center justify-center m-2 w-64">
+            <svg
+              fill="#ffffff"
+              width="64px"
+              height="64px"
+              viewBox="0 0 32.00 32.00"
+              id="Layer_1"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#ffffff"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"
+                ><rect
+                  x="0"
+                  y="0"
+                  width="32.00"
+                  height="32.00"
+                  rx="16"
+                  fill="#000000"></rect></g
+              ><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: none;
+                    }
+                  </style>
+                </defs>
+                <path
+                  d="M30,15h-6.07A8.0076,8.0076,0,0,0,17,8.0693V2H15V8.0693A8.0076,8.0076,0,0,0,8.07,15H2v2H8.07A8.0076,8.0076,0,0,0,15,23.9307V30h2V23.9307A8.0076,8.0076,0,0,0,23.9305,17H30ZM16,22a6,6,0,1,1,6-6A6.0066,6.0066,0,0,1,16,22Z"
+                  transform="translate(0 0)"></path>
+                <rect
+                  id="_Transparent_Rectangle_"
+                  data-name="<Transparent Rectangle>"
+                  class="cls-1"
+                  width="32"
+                  height="32"
+                  transform="translate(32 32) rotate(-180)"></rect>
+              </g></svg
+            >
+            <p class="font-sans text-md md:text-lg">3 minutos del Centro</p>
+          </div>
+
+          <div class="flex flex-col items-center justify-center m-2 w-64">
+            <svg
+              width="64px"
+              height="64px"
+              viewBox="-2.4 -2.4 28.80 28.80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#ffffff"
+              ><g id="SVGRepo_bgCarrier" stroke-width="0"
+                ><rect
+                  x="-2.4"
+                  y="-2.4"
+                  width="28.80"
+                  height="28.80"
+                  rx="14.4"
+                  fill="#000000"></rect></g
+              ><g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+                <path
+                  d="M12 6H12.01M9 20L3 17V4L5 5M9 20L15 17M9 20V14M15 17L21 20V7L19 6M15 17V14M15 6.2C15 7.96731 13.5 9.4 12 11C10.5 9.4 9 7.96731 9 6.2C9 4.43269 10.3431 3 12 3C13.6569 3 15 4.43269 15 6.2Z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </g></svg
+            >
+            <p class="font-sans text-md md:text-lg">15 minutos del Pabellón</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col w-full">
+        <div class="flex items-start justify-start md:ml-[15rem] ml-0">
+          <h2 class="font-sans text-3xl md:text-4xl mb-2 mt-3 ml-2">
+            <strong class="text-4xl md:text-5xl font-sans">PARTICIPANTES</strong
+            >
+          </h2>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <p
+            class="flex w-full md:w-2/3 font-sans text-md md:text-lg text-center items-center justify-center"
+          >
+            Jugadores con Licencia Nacional, participantes en competición
+            nacional o internacional. Jugadores con mucho interés por mejorar y
+            aprovechar la oportunidad del verano para su formación y crecimiento
+            personal. Se trata de vivir una experiencia inolvidable e intensa
+            donde el trabajo y el esfuerzo serán las claves del éxito del
+            Campus.
+          </p>
+          <p
+            class="flex w-full md:w-2/3 font-sans text-md md:text-lg text-center items-center justify-center underline italic"
+          >
+            Todos los participantes menores de edad deberán venir acompañados
+            por un técnico o responsable.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col w-full">
+        <div class="flex items-start justify-start md:ml-[15rem] ml-0">
+          <h2 class="font-sans text-3xl md:text-4xl mb-2 mt-3 ml-2">
+            <strong class="text-4xl md:text-5xl font-sans">NIVELES</strong> Disponibles
+          </h2>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <img
+            src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/campus/equipo.jpeg?t=2024-05-26T09%3A45%3A46.417Z"
+            alt="Equipo"
+            class="w-view md:w-1/2 h-92 object-cover p-1"
+          />
+          <ul class="p-2 font-sans">
+            <li>
+              A: Jugadores nivel internacional. Circuito Europeo, Selección
+              nacional.
+            </li>
+            <li>
+              B: Jugadores nivel nacional: Másteres, Campeonatos de España, Liga
+              Nacional de Clubs.
+            </li>
+            <li>
+              C: Jugadores nivel Autonómico: TTR, Campeonatos autonómicos, Ligas
+              Territoriales.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col w-full">
+        <div class="flex items-start justify-start md:ml-[15rem] ml-0">
+          <h2 class="font-sans text-3xl md:text-4xl mb-2 mt-3 ml-2">
+            <strong class="text-4xl md:text-5xl font-sans">EQUIPO</strong> Técnico
+          </h2>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <p
+            class="w-full md:w-2/3 font-sans text-md md:text-lg text-center items-center justify-center"
+          >
+            Bajo la Dirección de <strong>Roberto Mollinedo</strong>, contaremos
+            con técnicos europeos y españoles como invitados y acompañantes de
+            sus jugadores, así como técnicos y jugadores de alto nivel del Club.
+          </p>
+          <img
+            src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/campus/roberto.jpeg?t=2024-05-26T09%3A44%3A40.656Z"
+            alt="Roberto Mollinedo"
+            class="w-view md:w-1/2 h-92 object-cover p-1"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col w-full">
+        <div class="flex items-start justify-start">
+          <div class="flex items-start justify-start md:ml-[15rem] ml-0">
+            <h2 class="font-sans text-3xl md:text-4xl mb-2 mt-3 ml-2">
+            <strong class="text-4xl md:text-5xl font-sans">ACTIVIDAD</strong> Horarios</h2>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <p
+          class="w-full md:w-2/3 font-sans text-md md:text-lg text-center items-center justify-center"
+        >
+          En el Campus regirá el siguiente horario:
+        </p>
+        <ul class="p-2 font-sans">
+          <li>
+            <strong> Domingo:</strong> incorporación y Sesión de Bienvenida a las
+            18h en el Club.
+          </li>
+          <li><strong>Lunes a Sábado:</strong> actividades programadas.</li>
+          <li><strong>Domingo:</strong> desayuno y regreso a casa.</li>
+        </ul>
+        <img
+          src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/campus/horarioSemanal.jpeg?t=2024-05-26T09%3A49%3A30.617Z"
+          alt="Horario Semanal"
+          class="w-view md:w-1/2 h-92 object-cover p-1"
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col w-full">
+      <div class="flex items-start justify-start md:ml-[15rem] ml-0">
+        <h2 class="font-sans text-3xl md:text-4xl mb-2 mt-3 ml-2">
+          <strong class="text-4xl md:text-5xl font-sans">ACTIVIDADES</strong> Multiaventura
+        </h2>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <p
+          class="w-full md:w-2/3 font-sans text-md md:text-lg text-center items-center justify-center"
+        >
+          Con el fin de enriquecer el Campus y aprovechando los grandes espacios
+          naturales que disponemos en esta provincia hemos establecido dos
+          actividades que nos harán desconectar por un momento del ritmo
+          frenético del trabajo en pista y poder así conocer y vivir una
+          espectacular experiencia en el medio natural. Descenso del Rio Formiga
+          dentro del espacio natural de Ríos y Barrancos de la Sierra de Guara
+          Descenso en Rafting del rio Gállego (Riglos)
+        </p>
+        <p
+          class="w-full md:w-2/3 font-sans text-md md:text-lg text-center items-center justify-center"
+        >
+          * Estas dos actividades están concertadas con Guías profesionales de
+          la Zona.
+        </p>
+        <p
+          class="w-full md:w-2/3 font-sans text-md md:text-lg text-center items-center justify-center"
+        >
+          * Necesario traer zapatillas o botas de suela dura y cordones para las
+          actividades acuáticas.
+        </p>
+        <img
+          src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/images/campus/EXTRAS.jpeg?t=2024-05-26T09%3A52%3A59.052Z"
+          alt="Extra multiaventura"
+          class="w-view md:w-1/2 h-92 object-cover p-1"
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col w-full">
+      <div class="flex items-start justify-start md:ml-[15rem] ml-0">
+        <h2 class="font-sans text-3xl md:text-4xl mb-2 mt-3 ml-2">
+          <strong class="text-4xl md:text-5xl font-sans">CUOTAS</strong>
+        </h2>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <ul class="p-2 font-sans">
+          <li>Participantes externos: 290 euros</li>
+          <li>
+            Participantes internos: 640 euros. Incluido alojamiento
+            manutención(desayuno, comida y cena)
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col w-full">
+      <div class="flex items-start justify-start md:ml-[15rem] ml-0">
+        <h2 class="font-sans text-3xl md:text-4xl mb-2 mt-3 ml-2">
+          <strong class="text-4xl md:text-5xl font-sans">DESCUENTO</strong> Inscripción
+          Anticipada
+        </h2>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <ul class="p-2 font-sans">
+          <li>Antes del día 1 de Junio: 250 euros y 590 euros.</li>
+          <li>Antes del día 15 de junio: 270 euros y 615 euros.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col w-full">
+      <div class="flex items-start justify-start md:ml-[15rem] ml-0">
+        <h2 class="font-sans text-3xl md:text-4xl mb-2 mt-3 ml-2">
+          <strong class="text-4xl md:text-5xl font-sans">TÉCNICOS</strong> Acompañantes
+        </h2>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <ul
+          class="p-2 font-sans w-full md:w-2/3 text-md md:text-lg text-center items-center justify-center"
+        >
+          <li class="mb-3">
+            <strong>Acompañantes y responsables</strong> de jugadores participantes
+            en el Campus tendrán la posibilidad de alojarse en la residencia en régimen
+            de pensión completa por <strong>250 euros</strong> toda la semana.
+          </li>
+          <li>
+            <strong>Técnicos</strong> interesados en participar con jugadores de
+            su Centro, Club o Federación ponerse en contacto con la dirección del
+            club para poder acogerse a las ayudas específicas para su estancia y
+            participación en el Campus.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col w-full">
+      <div class="flex items-start justify-start md:ml-[15rem] ml-0">
+        <h2 class="font-sans text-3xl md:text-4xl mb-2 mt-3 ml-2">
+          <strong class="text-4xl md:text-5xl font-sans">INSCRIPCIÓN</strong>
+        </h2>
+      </div>
+      <div class="flex flex-col justify-center items-center">
+        <p
+          class="w-full md:w-2/3 font-sans text-md md:text-lg text-center items-center justify-center"
+        >
+          No pierdas esta oportunidad única y acompáñanos en esta aventura.
+          Nosotros nos encargaremos de que aprendas y perfecciones tu nivel y
+          disfutes de una semana increíble.
+        </p>
+        <div class="h-24 w-full flex items-center justify-center">
+          <a
+            class="flex text-center items-center justify-center w-72 bg-black hover:transparent text-white font-semibold py-2 px-4 md:m-6 m-2 border-transparent hover:border-white border-4 rounded"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfu_NyFLZAYCE8NUq7Xm5kU3TPm55TxP3iShe08rywiGWJaKw/viewform"
+            target="_blank"
+          >
+            Formulario Inscripción
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</GlobalLayout>
