@@ -3,6 +3,8 @@ import { ViewTransitions } from "astro:transitions";
 import { slide } from "astro:transitions";
 import Navbar from "../components/navbar/Navbar.astro";
 import Footer from "../components/footer/Footer.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+
 const { pageTitle } = Astro.props;
 ---
 
@@ -13,6 +15,7 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body class="w-screen">
+    <SpeedInsights />
     <Navbar />
     <slot />
     <!-- your content is injected here -->
