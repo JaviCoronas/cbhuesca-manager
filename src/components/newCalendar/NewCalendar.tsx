@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const NewCalendar = ({ tournaments }: { tournaments: any }) => {
   const pageTitle = "Calendario Club";
 
-  // Agrupar torneos por mes
   const tournamentsByMonth: { [key: string]: any[] } = {};
   tournaments.forEach((tournament: any) => {
     const month = new Date(tournament.date).toLocaleString("es-ES", {
@@ -15,20 +14,15 @@ const NewCalendar = ({ tournaments }: { tournaments: any }) => {
     tournamentsByMonth[month].push(tournament);
   });
 
-  // Obtener el mes actual
   const currentMonth = new Date().toLocaleString("es-ES", { month: "long" });
+  const [openMonth, setOpenMonth] = useState<string | null>(currentMonth);
+  const toggleMonth = (month: string) => {
+    setOpenMonth((prevMonth) => (prevMonth === month ? null : month));
+  };
 
   function capitalizeWord(word: string) {
     return word.charAt(0).toUpperCase() + word.slice(1);
   }
-
-  // Estado para controlar qué mes está abierto en el acordeón
-  const [openMonth, setOpenMonth] = useState<string | null>(currentMonth);
-
-  // Función para alternar entre abrir y cerrar el mes
-  const toggleMonth = (month: string) => {
-    setOpenMonth((prevMonth) => (prevMonth === month ? null : month));
-  };
 
   const getOrg = (organization: String) => {
     switch (organization) {
