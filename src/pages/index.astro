@@ -13,6 +13,8 @@ const pageTitle = "Club Bádminton Huesca";
 ---
 
 <GlobalLayout pageTitle={pageTitle}>
+  <!--
+
   <div
     class="flex flex-col bg-cover bg-center h-screen"
     style="background-image: url('/assets/homeBackground.webp');"
@@ -40,7 +42,50 @@ const pageTitle = "Club Bádminton Huesca";
         </a>
       </div>
     </div>
-    <div class="flex flex-col justify-center items-center mb-12 mt-12 md:mt-1">
+       -->
+      <div
+      class=" bg-slate-200 items-center justify-center text-center"
+    >
+      <div class=" bg-slate-200 w-full flex justify-center items-center pt-5">
+        <a
+          class="flex text-center items-center justify-center w-72 bg-slate-100 hover:transparent text-[#1a4e88] font-semibold py-2 px-4 md:m-6 m-2 border-transparent hover:border-[#1a4e88] border-4 rounded animate-wiggle animate-infinite"
+          href="https://btonhuesca.playoffinformatica.com/preinscripcion/7/FORMULARIO-INICIAL/"
+          target="_blank"
+        >
+          Abierto plazo de Inscripción
+        </a>
+      </div>
+      <div class="flex flex-col items-center w-full">
+        <video class="w-full h-auto sm:hidden" autoplay loop muted playsinline>
+          <source
+            src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/galleries/videoTEST01.mp4?t=2024-08-19T07%3A20%3A03.297Z"
+            type="video/mp4"
+          />
+        </video>
+        <video
+          class="w-auto h-screen hidden sm:block bg-slate-200"
+          autoplay
+          loop
+          muted
+          playsinline
+        >
+          <source
+            src="https://biyagvzgfmfdacqnofkq.supabase.co/storage/v1/object/public/galleries/videoTEST01.mp4?t=2024-08-19T07%3A20%3A03.297Z"
+            type="video/mp4"
+          />
+        </video>
+        <div class=" bg-slate-200 w-full flex justify-center">
+          <a
+            class="flex text-center items-center justify-center w-72 bg-slate-100 hover:transparent text-[#1a4e88] font-semibold py-2 px-4 md:m-6 m-2 border-transparent hover:border-[#1a4e88] border-4 rounded animate-wiggle animate-infinite"
+            href="https://btonhuesca.playoffinformatica.com/preinscripcion/7/FORMULARIO-INICIAL/"
+            target="_blank"
+          >
+            Abierto plazo de Inscripción
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col justify-center items-center mb-12 mt-12 md:mt-1 bg-slate-200">
       <PaperHome />
     </div>
   </div>
@@ -56,11 +101,6 @@ const pageTitle = "Club Bádminton Huesca";
   .animate-slide-in {
     animation-delay: 1s;
     animation: slide-in 2s; /* Duración, tipo, y retardo de la animación */
-    animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
-  }
-  .animate-slide-down {
-    animation-delay: 1s;
-    animation: slide-down 2s; /* Duración, tipo, y retardo de la animación */
     animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
   }
 </style>
